@@ -1,0 +1,1 @@
+export const navList = ['MAKEUP', 'FRAGRANCE', 'SKINCARE']
