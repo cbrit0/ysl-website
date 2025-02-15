@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -9,6 +10,8 @@
   --color-gray-300: '#42424570';
 
   --color-zinc: '#101010';
+
+  --default-font-family: 'Oswald', serif;
 }
 
 @layer base {
