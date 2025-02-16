@@ -1,9 +1,9 @@
-import { yslHorizontalImg, bagImg, searchImg } from "../utils"
-import { navList } from '../constants'
+import { yslHorizontalImg, bagImg, searchImg } from "../utils";
+import { navList } from '../constants';
 
 const Navbar = () => {
   return (
-    <header className="w-full py-5 sm:px-10 px-5 flex justify-between items-center">
+    <header className="absolute top-0 left-0 w-full py-5 sm:px-10 px-5 flex justify-between items-center bg-transparent z-10">
       <nav className="flex w-full screen-max-width">
         <img src={yslHorizontalImg} alt="YSL" width={120} />
 
@@ -21,7 +21,7 @@ const Navbar = () => {
         </div>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
