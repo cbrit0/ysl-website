@@ -1,5 +1,6 @@
 import ysl from '/assets/images/ysl.svg'
-import yslHorizontal from '/assets/images/yslHorizontal.svg'
+import yslHorizontalWhite from '/assets/images/yslHorizontalWhite.svg'
+import yslHorizontalBlack from '/assets/images/yslHorizontalBlack.svg'
 import search from '/assets/images/search.svg'
 import bag from '/assets/images/bag.svg'
 
@@ -14,7 +15,8 @@ import myslf from '/assets/images/myslfEauDeParfum.png'
 export const yslImg = ysl
 export const searchImg = search
 export const bagImg = bag
-export const yslHorizontalImg = yslHorizontal
+export const yslHorizontalWhiteImg = yslHorizontalWhite
+export const yslHorizontalBlackImg = yslHorizontalBlack
 
 export const heroVideo = hmv
 export const smallHeroVideo = smallmv
