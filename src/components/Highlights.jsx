@@ -27,7 +27,7 @@ const Highlights = () => {
   return (
     <section 
         id="highlights" 
-        className="w-screen overflow-hidden h-full common-padding bg-[url(/assets/images/highlightsBackground.webp)] bg-auto"
+        className="w-screen overflow-hidden h-full common-padding bg-[url(/assets/images/highlightsBackground.webp)] sm:bg-auto bg-cover bg-center"
     >
       <div className="screen-max-width">
         <div className="mb-12 w-full flex justify-center items-center">
