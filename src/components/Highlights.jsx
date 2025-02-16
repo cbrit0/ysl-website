@@ -1,6 +1,7 @@
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/all"
+import Carousel from "./Carousel"
 
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
@@ -33,6 +34,8 @@ const Highlights = () => {
           <h1 id="title" className="section-heading">OUR FRAGRANCE ICONS</h1>
         </div>
       </div>
+
+      <Carousel />
     </section>
   )
 }
