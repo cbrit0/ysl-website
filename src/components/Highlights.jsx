@@ -1,6 +1,28 @@
+import gsap from "gsap"
+import { useGSAP } from "@gsap/react"
+import { ScrollTrigger } from "gsap/all"
 
+gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 const Highlights = () => {
+  useGSAP(() => {
+    gsap.fromTo(
+      "#title",
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: "#highlights",
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    )
+  }, [])
+
   return (
     <section 
         id="highlights" 
