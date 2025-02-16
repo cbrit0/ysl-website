@@ -27,10 +27,10 @@ const Highlights = () => {
   return (
     <section 
         id="highlights" 
-        className="w-screen overflow-hidden h-full common-padding bg-[url(/assets/images/highlightsBackground.webp)]"
+        className="w-screen overflow-hidden h-full common-padding bg-[url(/assets/images/highlightsBackground.webp)] bg-auto"
     >
       <div className="screen-max-width">
-        <div className="mb-12 w-full md:flex items-end justify-center">
+        <div className="mb-12 w-full flex justify-center items-center">
           <h1 id="title" className="section-heading">OUR FRAGRANCE ICONS</h1>
         </div>
       </div>
