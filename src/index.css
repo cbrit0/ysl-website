@@ -127,10 +127,10 @@
   @apply text-white text-3xl md:text-5xl font-normal md:font-semibold my-2
 }
 
-@utility video-carousel_container {
-  @apply relative sm:w-[70vw] w-[88vw] md:h-[70vh] sm:h-[50vh] h-[35vh]
+@utility carousel-container {
+  @apply relative sm:w-[70vw] w-[88vw] md:h-[70vh] sm:h-[50vh] h-[35vh];
 }
 
-@utility g_fadeIn {
+@utility g-fadeIn {
   @apply opacity-0 translate-y-[100px]
 }
