@@ -1,4 +1,4 @@
-import { yImg, monParisImg, blackOpiumImg, myslfImg } from '../utils'
+import { yImg, monParisImg, blackOpiumImg, myslfImg, firstHighlightVideo, secondHighlightVideo, thirdHighlightVideo, fourthHighlightVideo } from '../utils'
 
 export const navList = ['MAKEUP', 'FRAGRANCE', 'SKINCARE']
 
@@ -34,5 +34,36 @@ export const carouselSlides = [
     content: '100 ml',
     image: myslfImg,
     duration: 4,
+  }
+]
+
+const highlightsSlides = [
+  {
+    id: 1,
+    texts: ['Nothing beats a good blush.', 'Nothing.', 'Dua Lipa Beauty secrets.'],
+    video: firstHighlightVideo,
+    button: 'DISCOVER NOW',
+    duration: 14,
+  },
+  {
+    id: 2,
+    texts: ['Turn up the lash volume like @LilaMoss'],
+    video: secondHighlightVideo,
+    button: 'DISCOVER LASH CLASH',
+    duration: 12,
+  },
+  {
+    id: 3,
+    texts: ['Even Dua Lipa can\' stop blushing.'],
+    video: thirdHighlightVideo,
+    button: 'DISCOVER NOW',
+    duration: 35,
+  },
+  {
+    id: 4,
+    texts: ['Turn heads with an invisible liner look by @AliAndreeamakeup'],
+    video: fourthHighlightVideo,
+    button: 'DISCOVER ALL HOURS',
+    duration: 31
   }
 ]
