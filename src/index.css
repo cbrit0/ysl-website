@@ -53,12 +53,12 @@
   }
   
   body {
-    color: white;
+    color: black;
     width: 100dvw;
     overflow-x: hidden;
     height: 100%;
-    background: #000;
-    border-color: #3b3b3b;
+    background: white;
+    border-color: black;
     user-select: none;
   }
   
@@ -99,11 +99,11 @@
 }
 
 @utility common-padding {
-  @apply sm:py-32 py-20 sm:px-10 px-5
+  @apply sm:py-16 py-10 sm:px-5 px-3
 }
 
 @utility section-heading {
-  @apply text-white lg:text-6xl md:text-5xl text-3xl lg:mb-0 mb-5 font-medium
+  @apply text-black lg:text-3xl md:text-2xl text-lg lg:mb-0 mb-5 font-bold
 }
 
 @utility feature-text {
