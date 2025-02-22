@@ -42,7 +42,7 @@ const VideoCarousel = () => {
               </div>
             </div>
 
-            <div className="w-full h-full border-2">
+            <div className="w-full h-full">
               <video
                 ref={videoRefs.current[i]}
                 id="video"

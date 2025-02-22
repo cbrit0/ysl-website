@@ -2,7 +2,7 @@ import VideoCarousel from "./VideoCarousel"
 
 const HypeOnSocial = () => {
   return (
-    <section id="hype-on-social" className="overflow-hidden h-screen common-padding bg-amber-100">
+    <section id="hype-on-social" className="overflow-hidden h-screen common-padding">
       <div className="screen-max-width h-full flex-col">
         <div className="w-full flex-center flex-col">
           <h1 id="title" className="section-heading">HYPE ON SOCIAL</h1>
