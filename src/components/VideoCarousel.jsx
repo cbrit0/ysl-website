@@ -16,6 +16,7 @@ const VideoCarousel = () => {
                   </div>
                 </div>
               </div>
+
               <div className="w-full h-full border-2">
                 <video
                   id="video"
@@ -29,6 +30,10 @@ const VideoCarousel = () => {
                   <source src={slide.video} type="video/mp4" />
                 </video>
               </div>
+
+              <a className="h-14 w-full flex-center border mt-4 font-medium hover:border-2 cursor-pointer select-none">
+                {slide.button}
+              </a>
             </div>
           ))}
         </div>
