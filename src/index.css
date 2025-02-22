@@ -61,3 +61,7 @@
   @apply  sm:w-[70vw] w-[88vw] md:h-[70vh] sm:h-[50vh] h-[35vh];
 }
 
+@utility control-btn {
+  @apply ml-4 rounded-full bg-white flex-center
+}
+

@@ -17,6 +17,9 @@ import secondHighlight from '/assets/videos/v-4dd63971-0016-4451-bb66-449b086881
 import thirdHighlight from '/assets/videos/v-337ae941-64bc-49af-92be-8d1cc946f66c.mp4'
 import fourthHighlight from '/assets/videos/v-5e07b294-9bb2-4376-9032-ec92f3056b04.mp4'
 
+import play from '/assets/images/play.svg'
+import pause from '/assets/images/pause.svg'
+
 export const yslImg = ysl
 export const searchImg = search
 export const bagImg = bag
@@ -35,3 +38,6 @@ export const firstHighlightVideo = firstHighlight
 export const secondHighlightVideo = secondHighlight
 export const thirdHighlightVideo = thirdHighlight
 export const fourthHighlightVideo = fourthHighlight
+
+export const playImg = play
+export const pauseImg = pause

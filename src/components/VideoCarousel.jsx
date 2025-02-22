@@ -1,4 +1,5 @@
 import { highlightsSlides } from "../constants";
+import { playImg, pauseImg } from "../utils";
 
 const VideoCarousel = () => {
     return (
@@ -29,6 +30,12 @@ const VideoCarousel = () => {
                 >
                   <source src={slide.video} type="video/mp4" />
                 </video>
+
+                <button className="control-btn absolute -translate-y-15">
+                  <img
+                    src={pauseImg}
+                  />
+                </button>
               </div>
 
               <a className="h-14 w-full flex-center border mt-4 font-medium hover:border-2 cursor-pointer select-none">
