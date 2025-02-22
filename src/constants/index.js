@@ -1,4 +1,4 @@
-import { yImg, monParisImg, blackOpiumImg, myslfImg, firstHighlightVideo, secondHighlightVideo, thirdHighlightVideo, fourthHighlightVideo } from '../utils'
+import { yImg, monParisImg, blackOpiumImg, myslfImg, firstHighlightVideo, secondHighlightVideo, thirdHighlightVideo, fourthHighlightVideo, coralClashBgImg, coralClashImg, berryBangBgImg, berryBangImg, nudeLavalliereBgImg, nudeLavalliereImg, lavenderLustBgImg, lavenderLustImg, peachyNudeBgImg, peachyNudeImg, restlessRoseBgImg, restlessRoseImg, nocturnalNudeBgImg, nocturnalNudeImg, pinkVoltageBgImg, pinkVoltageImg, roseHazeBgImg, roseHazeImg, babydollPinkBgImg, babydollPinkImg, suaveSunstoneBgImg, suaveSunstoneImg } from '../utils'
 
 export const navList = ['MAKEUP', 'FRAGRANCE', 'SKINCARE']
 
@@ -35,6 +35,86 @@ export const carouselSlides = [
     image: myslfImg,
     duration: 4,
   }
+]
+
+export const shades = [
+  {
+    id: 1,
+    color: '#EE7C6D',
+    colorName: '57 CORAL CLASH',
+    backgroundImg: coralClashBgImg,
+    image: coralClashImg,
+  },
+  {
+    id: 2,
+    color: '#AE4654',
+    colorName: '54 BERRY BANG',
+    backgroundImg: berryBangBgImg,
+    image: berryBangImg,
+  },
+  {
+    id: 3,
+    color: '#B96372',
+    colorName: '44 NUDE LAVALLIÈRE',
+    backgroundImg: nudeLavalliereBgImg,
+    image: nudeLavalliereImg
+  },
+  {
+    id: 4,
+    color: '#F7E7F3',
+    colorName: '69 LAVENDER LUST',
+    backgroundImg: lavenderLustBgImg,
+    image: lavenderLustImg,
+  },
+  {
+    id: 5,
+    color: '#CF6665',
+    colorName: '37 PEACHY NUDE',
+    backgroundImg: peachyNudeBgImg,
+    image: peachyNudeImg
+  },
+  {
+    id: 6,
+    color: '#F08492',
+    colorName: '93 RESTLESS ROSÉ',
+    backgroundImg: restlessRoseBgImg,
+    image: restlessRoseImg,
+  },
+  {
+    id: 7,
+    color: '#D38479',
+    colorName: '12 NOCTURNAL NUDE',
+    backgroundImg: nocturnalNudeBgImg,
+    image: nocturnalNudeImg
+  },
+  {
+    id: 8,
+    color: '#EF81A0',
+    colorName: '87 PINK VOLTAGE',
+    backgroundImg: pinkVoltageBgImg,
+    image: pinkVoltageImg,
+  },
+  {
+    id: 9,
+    color: '#D37E7C',
+    colorName: '06 ROSER HAZE',
+    backgroundImg: roseHazeBgImg,
+    image: roseHazeImg,
+  },
+  {
+    id: 10,
+    color: '#F08FBA',
+    colorName: '42 BABYDOLL PINK',
+    backgroundImg: babydollPinkBgImg,
+    image: babydollPinkImg,
+  },
+  {
+    id: 11,
+    color: '#F7AFA1',
+    colorName: '24 SUAVE SUNSTONE',
+    backgroundImg: suaveSunstoneBgImg,
+    image: suaveSunstoneImg
+  },
 ]
 
 export const highlightsSlides = [
