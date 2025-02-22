@@ -55,13 +55,15 @@ const VideoCarousel = () => {
               >
                 <source src={slide.video} type="video/mp4" />
               </video>
-
-              <button className="control-btn absolute -translate-y-15 cursor-pointer">
+              
+              <button 
+                className="control-btn absolute -translate-y-15 h-10 w-10 cursor-pointer border" 
+                onClick={() => togglePlayPause(i)}
+              >
                 <img
                   src={videoStates[i].isPlaying ? pauseImg : playImg}
                   alt={videoStates[i].isPlaying ? "Pause" : "Play"}
-                  onClick={() => togglePlayPause(i)}
-                  className="w-10 h-10"
+                  className={`${videoStates[i].isPlaying ? 'h-full w-full' : 'h-4 w-4 ml-1'}`}
                 />
               </button>
             </div>
