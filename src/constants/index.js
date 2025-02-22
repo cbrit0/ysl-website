@@ -37,31 +37,31 @@ export const carouselSlides = [
   }
 ]
 
-const highlightsSlides = [
+export const highlightsSlides = [
   {
     id: 1,
-    texts: ['Nothing beats a good blush.', 'Nothing.', 'Dua Lipa Beauty secrets.'],
+    text: 'Nothing beats a good blush. Nothing. Dua Lipa Beauty secrets.',
     video: firstHighlightVideo,
     button: 'DISCOVER NOW',
     duration: 14,
   },
   {
     id: 2,
-    texts: ['Turn up the lash volume like @LilaMoss'],
+    text: 'Turn up the lash volume like @LilaMoss',
     video: secondHighlightVideo,
     button: 'DISCOVER LASH CLASH',
     duration: 12,
   },
   {
     id: 3,
-    texts: ['Even Dua Lipa can\' stop blushing.'],
+    text: 'Even Dua Lipa can\'t <br/>stop blushing.',
     video: thirdHighlightVideo,
     button: 'DISCOVER NOW',
     duration: 35,
   },
   {
     id: 4,
-    texts: ['Turn heads with an invisible liner look by @AliAndreeamakeup'],
+    text: 'Turn heads with an invisible liner look by @AliAndreeamakeup',
     video: fourthHighlightVideo,
     button: 'DISCOVER ALL HOURS',
     duration: 31
