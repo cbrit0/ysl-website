@@ -1,3 +1,4 @@
+@import url('/public/fonts/stylesheet.css');
 @import "tailwindcss";
 
 @theme {
@@ -10,39 +11,9 @@
 
   --color-zinc: '#101010';
 
-  --default-font-family: 'Avant Garde', serif;
-}
-
-@font-face {
-  font-family: Avant Garde;
-  font-style: normal;
-  font-weight: light;
-  font-display: swap;
-  src: url("/fonts/ITCAvantGardeStd-XLt.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: Avant Garde;
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap;
-  src: url("/fonts/ITCAvantGardeStd-Bk.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: Avant Garde;
-  font-style: normal;
-  font-weight: medium;
-  font-display: swap;
-  src: url("/fonts/ITCAvantGardeStd-Md.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: Avant Garde;
-  font-style: normal;
-  font-weight: bold;
-  font-display: swap;
-  src: url("/fonts/ITCAvantGardeStd-Bold.woff2") format("woff2");
+  --default-font-family: 'ITC Avant Garde Std Md', serif;
+  --font-light: 'ITC Avant Garde Std Bk', serif;
+  --font-bold: 'ITC Avant Garde Std Bold', serif;
 }
 
 @layer base {
@@ -54,12 +25,11 @@
   
   body {
     color: black;
-    width: 100dvw;
     overflow-x: hidden;
     height: 100%;
-    background: white;
+    background: transparent;
     border-color: black;
-    user-select: none;
+    user-select: text;
   }
   
   canvas {
@@ -70,7 +40,7 @@
     margin-inline-start: auto;
     margin-inline-end: auto;
     position: relative;
-    max-width: 1120px;
+    max-width: 1240px;
   }
 }
 
@@ -82,22 +52,6 @@
   @apply h-[calc(100vh-60px)]
 }
 
-@utility btn {
-  @apply px-5 py-2 rounded-3xl bg-blue my-5 hover:bg-transparent border border-transparent hover:border hover:text-blue hover:border-blue
-}
-
-@utility color-container {
-  @apply flex items-center justify-center px-4 py-4 rounded-full bg-gray-300 backdrop-blur
-}
-
-@utility size-btn-container {
-  @apply flex items-center justify-center p-1 rounded-full bg-gray-300 backdrop-blur ml-3 gap-1
-}
-
-@utility size-btn {
-  @apply w-10 h-10 text-sm flex justify-center items-center bg-white text-black rounded-full transition-all
-}
-
 @utility common-padding {
   @apply sm:py-16 py-10 sm:px-5 px-3
 }
@@ -106,62 +60,7 @@
   @apply text-black lg:text-3xl md:text-2xl text-lg lg:mb-0 mb-5 font-bold
 }
 
-@utility feature-text {
-  @apply text-gray max-w-md text-lg md:text-xl font-semibold opacity-0 translate-y-[100px]
-}
-
-@utility feature-text-container {
-  @apply w-full flex-center flex-col md:flex-row mt-10 md:mt-16 gap-5
-}
-
-@utility feature-video {
-  @apply w-full h-full object-cover object-center scale-150 opacity-0
-}
-
-@utility feature-video-container {
-  @apply w-full flex flex-col md:flex-row gap-5 items-center
-}
-
-@utility link {
-  @apply text-blue hover:underline cursor-pointer flex items-center text-xl opacity-0 translate-y-20
-}
-
-@utility control-btn {
-  @apply ml-4 p-4 rounded-full bg-gray-300 backdrop-blur flex-center
-}
-
-@utility hero-title {
-  @apply text-center font-semibold text-3xl text-gray-100 opacity-0 max-md:mb-10
-}
-
-@utility hiw-title {
-  @apply text-4xl md:text-7xl font-semibold text-center
-}
-
-@utility hiw-subtitle {
-  @apply text-gray font-semibold text-xl md:text-2xl py-10 text-center
-}
-
-@utility hiw-video {
-  @apply absolute w-[95%] h-[90%] rounded-[56px] overflow-hidden
-}
-
-@utility hiw-text-container {
-  @apply flex md:flex-row flex-col justify-between items-start gap-24
-}
-
-@utility hiw-text {
-  @apply text-gray text-xl font-normal md:font-semibold
-}
-
-@utility hiw-bigtext {
-  @apply text-white text-3xl md:text-5xl font-normal md:font-semibold my-2
-}
-
 @utility carousel-container {
-  @apply relative sm:w-[70vw] w-[88vw] md:h-[70vh] sm:h-[50vh] h-[35vh];
+  @apply  sm:w-[70vw] w-[88vw] md:h-[70vh] sm:h-[50vh] h-[35vh];
 }
 
-@utility g-fadeIn {
-  @apply opacity-0 translate-y-[100px]
-}
