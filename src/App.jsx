@@ -1,8 +1,8 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Highlights from "./components/Highlights";
 import Model from "./components/Model";
 import HypeOnSocial from "./components/HypeOnSocial";
+import Shades from "./components/Shades";
 
 const App = () => {
   return (
@@ -11,7 +11,7 @@ const App = () => {
         <Navbar />
         <Hero />
       </div>
-      <Highlights />
+      <Shades />
       <Model />
       <HypeOnSocial />
     </main>
