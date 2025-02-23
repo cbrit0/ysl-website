@@ -34,3 +34,10 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'ITC Avant Garde Std Demi';
+    src: url('ITCAvantGardeStd-Demi.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+

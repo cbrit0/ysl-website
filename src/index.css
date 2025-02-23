@@ -2,17 +2,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-blue: '#2997FF';
-
-  --color-gray: '#86868b';
-  --color-gray-100: '#94928d';
-  --color-gray-200: '#afafaf';
-  --color-gray-300: '#42424570';
-
-  --color-zinc: '#101010';
-
   --default-font-family: 'ITC Avant Garde Std Bk', serif;
   --font-medium: 'ITC Avant Garde Std Md', serif;
+  --font-semibold: 'ITC Avant Garde Std Demi', serif;
   --font-bold: 'ITC Avant Garde Std Bold', serif;
 }
 
