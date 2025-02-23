@@ -1,8 +1,6 @@
 import ysl from '/assets/images/ysl.svg'
 import yslHorizontalWhite from '/assets/images/yslHorizontalWhite.svg'
 import yslHorizontalBlack from '/assets/images/yslHorizontalBlack.svg'
-import search from '/assets/images/search.svg'
-import bag from '/assets/images/bag.svg'
 
 import hmv from '/assets/videos/hero.mp4'
 import smallmv from '/assets/videos/smallHero.mp4'
@@ -43,9 +41,10 @@ import restlessRose from '/assets/images/shades/93_RESTLESS ROSE_web.jpg'
 import play from '/assets/images/play.svg'
 import pause from '/assets/images/pause.svg'
 
+import leftArrow from '/assets/images/chevron2-left.svg'
+import rightArrow from '/assets/images/chevron2-right.svg'
+
 export const yslImg = ysl
-export const searchImg = search
-export const bagImg = bag
 export const yslHorizontalWhiteImg = yslHorizontalWhite
 export const yslHorizontalBlackImg = yslHorizontalBlack
 
@@ -88,3 +87,5 @@ export const pinkVoltageImg = pinkVoltage
 export const restlessRoseBgImg = restlessRoseBg
 export const restlessRoseImg = restlessRose
 
+export const leftArrowImg = leftArrow
+export const rightArrowImg = rightArrow

@@ -57,3 +57,14 @@
   @apply ml-4 rounded-full bg-white flex-center
 }
 
+@utility splide__arrow {
+  @apply flex items-center justify-center bg-white shadow-xs shadow-black cursor-pointer h-10 w-10 p-0 absolute top-[55%] z-10
+}
+
+@utility splide__arrow--prev {
+  @apply -left-10
+}
+
+@utility splide__arrow--next {
+  @apply -right-10
+}
