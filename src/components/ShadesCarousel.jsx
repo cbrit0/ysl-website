@@ -12,11 +12,12 @@ const splideOptions = {
   pagination: false,
 }
 
-function ShadesCarousel() {
+const ShadesCarousel = ({ onSlideChange }) => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   const handleSlideChange = (splide) => {
     setActiveSlideIndex(splide.index)
+    onSlideChange(splide.index)
   }
 
   return (
