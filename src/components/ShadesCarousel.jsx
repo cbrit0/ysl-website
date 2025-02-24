@@ -1,7 +1,7 @@
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css/core';
 import { shades } from "../constants";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { leftArrowImg, rightArrowImg } from '../utils';
 
 const splideOptions = {
@@ -13,12 +13,17 @@ const splideOptions = {
 }
 
 const ShadesCarousel = ({ onSlideChange }) => {
-  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+  const [activeSlideIndex, setActiveSlideIndex] = useState(null);
 
   const handleSlideChange = (splide) => {
     setActiveSlideIndex(splide.index)
     onSlideChange(splide.index)
   }
+
+  useEffect(() => {
+    setActiveSlideIndex(0)
+    onSlideChange(0)
+  }, [])
 
   return (
     <div className="h-full relative flex-center w-full">
