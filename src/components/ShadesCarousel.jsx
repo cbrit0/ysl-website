@@ -21,21 +21,20 @@ const ShadesCarousel = ({ onSlideChange }) => {
   }
 
   return (
-    <div className="h-full relative flex-center w-full border-2 border-black">
+    <div className="h-full relative flex-center w-full">
       <Splide 
-        className="border-2 border-green-700"
         hasTrack={false}
         options={splideOptions}
         onMove={handleSlideChange}     
       >
-        <SplideTrack className="border-2 border-blue-700">
+        <SplideTrack className="mb-2">
           {shades.map((shade, i) => (
             <SplideSlide key={shade.id} className="flex-center h-full">
-              <div className="flex-center flex-col border-2 border-red-700">
+              <div className="flex-center flex-col">
                 <img 
                   src={shade.backgroundImg} 
                   alt={shade.colorName}
-                  className="cursor-pointer"
+                  className={`${activeSlideIndex === i ? "w-11/12" : "w-10/12 mt-10"} cursor-pointer transition-all ease-in-out duration-200`}
                 />
                 {activeSlideIndex === i && (
                   <>
