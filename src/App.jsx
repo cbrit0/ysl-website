@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Model from "./components/Model";
 import HypeOnSocial from "./components/HypeOnSocial";
 import Shades from "./components/Shades";
+import QuickLinks from "./components/QuickLinks";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Hero />
       </div>
       <Shades />
+      <QuickLinks />
       <Model />
       <HypeOnSocial />
     </main>
