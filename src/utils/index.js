@@ -44,6 +44,11 @@ import pause from '/assets/images/pause.svg'
 import leftArrow from '/assets/images/chevron2-left.svg'
 import rightArrow from '/assets/images/chevron2-right.svg'
 
+import bog1 from '/assets/images/quicklinks/bog-quicklinks-img1.jpg'
+import bog2 from '/assets/images/quicklinks/bog-quicklinks-img2.jpg'
+import bog3 from '/assets/images/quicklinks/bog-quicklinks-img3.jpg'
+import bog4 from '/assets/images/quicklinks/bog-quicklinks-img4.jpg'
+
 export const yslImg = ysl
 export const yslHorizontalWhiteImg = yslHorizontalWhite
 export const yslHorizontalBlackImg = yslHorizontalBlack
@@ -89,3 +94,8 @@ export const restlessRoseImg = restlessRose
 
 export const leftArrowImg = leftArrow
 export const rightArrowImg = rightArrow
+
+export const bog1Img = bog1
+export const bog2Img = bog2
+export const bog3Img = bog3
+export const bog4Img = bog4
