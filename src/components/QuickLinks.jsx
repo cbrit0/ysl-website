@@ -2,7 +2,7 @@ import { bog1Img, bog2Img, bog3Img, bog4Img } from "../utils"
 
 const QuickLinks = () => {
   return (
-    <section id="quicklinks" className="overflow-hidden common-padding">
+    <section id="quicklinks" className="overflow-hidden py-5">
       <div className="screen-max-width flex-center">
         <div className="w-[22%] flex-center border-gray-300 border rounded-full mr-4 hover:border-black hover:cursor-pointer">
           <div className="mt-1 mb-1 flex-center">
