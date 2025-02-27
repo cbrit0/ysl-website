@@ -68,3 +68,7 @@
 @utility splide__arrow--next {
   @apply -right-10
 }
+
+@utility quicklink-containter {
+  @apply flex-center border-gray-300 border rounded-full mr-4 hover:border-black hover:cursor-pointer
+}
