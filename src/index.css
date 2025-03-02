@@ -70,5 +70,13 @@
 }
 
 @utility quicklink-containter {
-  @apply flex-center border-gray-300 border rounded-full mr-4 hover:border-black hover:cursor-pointer
+  @apply flex-center border-gray-300 border rounded-full hover:border-black hover:cursor-pointer
+}
+
+@utility quicklink-text-container {
+  @apply lg:mt-1 lg:mb-1 lg:flex-center
+}
+
+@utility quicklink-text {
+  @apply lg:font-bold lg:ml-2 text-sm
 }
