@@ -2,14 +2,13 @@ import { yImg, monParisImg, blackOpiumImg, myslfImg, firstHighlightVideo, second
 
 export const navList = ['MAKEUP', 'FRAGRANCE', 'SKINCARE']
 
-export const carouselSlides = [
+export const fragrances = [
   {
     id: 1,
     name: 'Y, EAU DE PARFUM',
     description: 'THE FRAGRANCE OF AN ACCOMPLISHED SELF-MADE MAN, NOW REFILLABLE',
     content: '100 ml',
     image: yImg,
-    duration: 4,
   },
   {
     id: 2,
@@ -17,7 +16,6 @@ export const carouselSlides = [
     description: 'THE HYPNOTIC CHYPRE FLORAL',
     content: '50 ml',
     image: monParisImg,
-    duration: 4,
   },
   {
     id: 3,
@@ -25,7 +23,6 @@ export const carouselSlides = [
     description: 'CONFIDENT & BOLD, THE BLACK OPIUM WOMAN EMBODIES THE NEW YVES SAINT LAURENT SPIRIT',
     content: '50 ml',
     image: blackOpiumImg,
-    duration: 4,
   },
   {
     id: 4,
@@ -33,7 +30,6 @@ export const carouselSlides = [
     description: 'THE NEW MASCULINE REFILLABLE FRAGRANCE BY YSL. THE EXPRESSION OF THE MAN YOU ARE WITH ALL YOUR NUANCES',
     content: '100 ml',
     image: myslfImg,
-    duration: 4,
   }
 ]
 
