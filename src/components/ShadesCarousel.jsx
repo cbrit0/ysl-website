@@ -1,7 +1,7 @@
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css/core';
 import { shades } from "../constants";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { leftArrowImg, rightArrowImg } from '../utils';
 
 const splideOptions = {
@@ -13,11 +13,18 @@ const splideOptions = {
 }
 
 const ShadesCarousel = ({ onSlideChange }) => {
-  const [activeSlideIndex, setActiveSlideIndex] = useState(null);
+  const [activeSlideIndex, setActiveSlideIndex] = useState(null)
+  const splideRef = useRef(null)
 
   const handleSlideChange = (splide) => {
     setActiveSlideIndex(splide.index)
     onSlideChange(splide.index)
+  }
+
+  const handlePaginationClick = (index) => {
+    if (splideRef.current) {
+      splideRef.current.go(index)
+    }
   }
 
   useEffect(() => {
@@ -30,7 +37,8 @@ const ShadesCarousel = ({ onSlideChange }) => {
       <Splide 
         hasTrack={false}
         options={splideOptions}
-        onMove={handleSlideChange}     
+        onMove={handleSlideChange}
+        ref={splideRef}
       >
         <SplideTrack className="mb-2">
           {shades.map((shade, i) => (
@@ -43,7 +51,8 @@ const ShadesCarousel = ({ onSlideChange }) => {
                 />
                 {activeSlideIndex === i && (
                   <>
-                    <p className="text-sm font-semibold cursor-pointer">MAKE ME BLUSH BOLD BLURRING BLUSH</p><div className="w-11/12 flex-center flex-col">
+                    <p className="text-sm font-semibold cursor-pointer">MAKE ME BLUSH BOLD BLURRING BLUSH</p>
+                    <div className="w-11/12 flex-center flex-col">
                       <small className="text-wrap text-center mt-4 text-xs text-gray-500">
                         An ultra-sensorial silky powder blush that blurs the look of pores. The waterproof and sweat proof formula ensures a 24h bright color flush.
                       </small>
@@ -66,16 +75,28 @@ const ShadesCarousel = ({ onSlideChange }) => {
         <div className="splide__arrows">
           <button className="splide__arrow splide__arrow--prev flex-center">
             <div className='h-full ml-4 mr-5 flex items-center'>
-              <img src={leftArrowImg} />
+              <img src={leftArrowImg} alt="Previous" />
             </div>
           </button>
           <button className="splide__arrow splide__arrow--next">
-          <div className='h-full ml-5 mr-4 flex items-center'>
-              <img src={rightArrowImg} />
+            <div className='h-full ml-5 mr-4 flex items-center'>
+              <img src={rightArrowImg} alt="Next" />
             </div>
           </button>
         </div>
       </Splide>
+
+      <div className="flex-center flex-wrap m-0 absolute translate-y-80 gap-3">
+        {shades.map((_, index) => (
+          <button
+            key={index}
+            className='h-5 hover:cursor-pointer'
+            onClick={() => handlePaginationClick(index)}
+          >
+            <div className={`${activeSlideIndex === index ? 'bg-black w-12 h-1' : 'w-7.5 h-[3px] bg-gray-500 opacity-70'}`} />
+          </button>
+        ))}
+      </div>
     </div>
   )
 }
