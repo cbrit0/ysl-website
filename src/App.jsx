@@ -4,6 +4,7 @@ import Model from "./components/Model";
 import HypeOnSocial from "./components/HypeOnSocial";
 import Shades from "./components/Shades";
 import QuickLinks from "./components/QuickLinks";
+import Discover from "./components/Discover";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <QuickLinks />
       <Model />
       <HypeOnSocial />
+      <Discover />
     </main>
   );
 };
