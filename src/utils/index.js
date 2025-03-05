@@ -50,7 +50,7 @@ import bog3 from '/assets/images/quicklinks/bog-quicklinks-img3.jpg'
 import bog4 from '/assets/images/quicklinks/bog-quicklinks-img4.jpg'
 
 import makeup from '/assets/images/makeup.jpg'
-import fragrance from '/assets/images/fragrance.jpg'
+import fragrances from '/assets/images/fragrances.jpg'
 import parfums from '/assets/images/parfums.jpg'
 import skincare from '/assets/images/skincare.jpg'
 
@@ -106,6 +106,6 @@ export const bog3Img = bog3
 export const bog4Img = bog4
 
 export const makeupImg = makeup
-export const fragranceImg = fragrance
+export const fragrancesImg = fragrances
 export const parfumsImg = parfums
 export const skincareImg = skincare
