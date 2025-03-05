@@ -49,6 +49,11 @@ import bog2 from '/assets/images/quicklinks/bog-quicklinks-img2.jpg'
 import bog3 from '/assets/images/quicklinks/bog-quicklinks-img3.jpg'
 import bog4 from '/assets/images/quicklinks/bog-quicklinks-img4.jpg'
 
+import makeup from '/assets/images/makeup.jpg'
+import fragrance from '/assets/images/fragrance.jpg'
+import parfums from '/assets/images/parfums.jpg'
+import skincare from '/assets/images/skincare.jpg'
+
 export const yslImg = ysl
 export const yslHorizontalWhiteImg = yslHorizontalWhite
 export const yslHorizontalBlackImg = yslHorizontalBlack
@@ -99,3 +104,8 @@ export const bog1Img = bog1
 export const bog2Img = bog2
 export const bog3Img = bog3
 export const bog4Img = bog4
+
+export const makeupImg = makeup
+export const fragranceImg = fragrance
+export const parfumsImg = parfums
+export const skincareImg = skincare
