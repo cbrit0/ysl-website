@@ -1,47 +1,66 @@
-import { fragrancesImg, makeupImg, parfumsImg, skincareImg } from "../utils"
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation, Pagination } from 'swiper/modules'
+import { categories } from '../constants'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import '../styles.css'
 
 const Discover = () => {
   return (
     <section id="discover" className="overflow-hidden h-screen common-padding">
       <div className="screen-max-width h-full flex-col">
-        <h1 className="section-heading flex-center">DISCOVER BY CATEGORY</h1>
+        <h1 className="section-heading flex-center mb-8">DISCOVER BY CATEGORY</h1>
 
-        <div className="flex items-center gap-2 mt-8">
-          <div className="w-1/4 flex-col p-2">
-            <img src={makeupImg} alt="makeup" />
-            <div className="mt-6 mb-12 font-bold text-xl flex-center">MAKEUP</div>
+        <Swiper
+          modules={[Navigation, Pagination]}
+          spaceBetween={0}
+          slidesPerView={1}
+          navigation={{
+            nextEl: '.custom-next',
+            prevEl: '.custom-prev',
+          }}
+          pagination={{
+            clickable: true,
+            el: '#custom-pagination',
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 4,
+            },
+          }}
+        >
+          {categories.map((category, index) => (
+            <SwiperSlide key={index}>
+              <div className="flex-col p-2">
+                <img src={category.image} alt={category.name} />
+                <p 
+                  className={`mt-6 font-bold text-xl flex-center ${index === 2 ? 'mb-5' : 'mb-12'}`}
+                  dangerouslySetInnerHTML={{ __html: category.title }}
+                />
+                <a className="discover-now-button">
+                  DISCOVER NOW
+                </a>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-            <a className="discover-now-button">
-              DISCOVER NOW
-            </a>
-          </div>
+        <div id="custom-pagination" className="flex-center gap-3 mt-8" />
 
-          <div className="w-1/4 flex-col p-2">
-            <img src={fragrancesImg} alt="fragrances" />
-            <div className="mt-6 mb-12 font-bold text-xl flex-center">FRAGRANCES</div>
-            
-            <a className="discover-now-button">
-              DISCOVER NOW
-            </a>
-          </div>
-
-          <div className="w-1/4 flex-col p-2">
-            <img src={parfumsImg} alt="vestiaire des parfums" />
-            <div className="mt-6 mb-5 font-bold text-xl flex-center">LE VESTIAIRE <br/> DES PARFUMS</div>
-
-            <a className="discover-now-button">
-              DISCOVER NOW
-            </a>
-          </div>
-
-          <div className="w-1/4 flex-col p-2">
-            <img src={skincareImg} alt="skincare" />
-            <div className="mt-6 mb-12 font-bold text-xl flex-center">SKINCARE</div>
-
-            <a className="discover-now-button">
-              DISCOVER NOW
-            </a>
-          </div>
+        <div className="custom-navigation">
+          <button className="custom-prev">
+            &#10094;
+          </button>
+          <button className="custom-next">
+            &#10095;
+          </button>
         </div>
       </div>
     </section>

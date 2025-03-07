@@ -1,4 +1,4 @@
-import { yImg, monParisImg, blackOpiumImg, myslfImg, firstHighlightVideo, secondHighlightVideo, thirdHighlightVideo, fourthHighlightVideo, coralClashBgImg, coralClashImg, berryBangBgImg, berryBangImg, nudeLavalliereBgImg, nudeLavalliereImg, lavenderLustBgImg, lavenderLustImg, peachyNudeBgImg, peachyNudeImg, restlessRoseBgImg, restlessRoseImg, nocturnalNudeBgImg, nocturnalNudeImg, pinkVoltageBgImg, pinkVoltageImg, roseHazeBgImg, roseHazeImg, babydollPinkBgImg, babydollPinkImg, suaveSunstoneBgImg, suaveSunstoneImg } from '../utils'
+import { yImg, monParisImg, blackOpiumImg, myslfImg, firstHighlightVideo, secondHighlightVideo, thirdHighlightVideo, fourthHighlightVideo, coralClashBgImg, coralClashImg, berryBangBgImg, berryBangImg, nudeLavalliereBgImg, nudeLavalliereImg, lavenderLustBgImg, lavenderLustImg, peachyNudeBgImg, peachyNudeImg, restlessRoseBgImg, restlessRoseImg, nocturnalNudeBgImg, nocturnalNudeImg, pinkVoltageBgImg, pinkVoltageImg, roseHazeBgImg, roseHazeImg, babydollPinkBgImg, babydollPinkImg, suaveSunstoneBgImg, suaveSunstoneImg, makeupImg, fragrancesImg, parfumsImg, skincareImg } from '../utils'
 
 export const navList = ['MAKEUP', 'FRAGRANCE', 'SKINCARE']
 
@@ -141,5 +141,28 @@ export const highlightsSlides = [
     video: fourthHighlightVideo,
     button: 'DISCOVER ALL HOURS',
     duration: 31
+  }
+]
+
+export const categories = [
+  {
+    title: 'MAKEUP',
+    name: 'MAKEUP',
+    image: makeupImg,
+  },
+  {
+    title: 'FRAGRANCES',
+    name: 'FRAGRANCES',
+    image: fragrancesImg,
+  },
+  {
+    title: 'LE VESTIAIRE <br/> DES PARFUMS',
+    name: 'LE VESTIAIRE DES PARFUMS',
+    image: parfumsImg,
+  },
+  {
+    title: 'SKINCARE',
+    name: 'SKINCARE',
+    image: skincareImg
   }
 ]

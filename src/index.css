@@ -46,7 +46,7 @@
 }
 
 @utility section-heading {
-  @apply text-black lg:text-3xl md:text-2xl text-lg lg:mb-0 mb-5 font-bold
+  @apply text-black lg:text-3xl md:text-2xl text-2xl lg:mb-0 mb-5 font-bold
 }
 
 @utility carousel-container {
