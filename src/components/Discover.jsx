@@ -52,7 +52,7 @@ const Discover = () => {
           ))}
         </Swiper>
 
-        <div id="custom-pagination" className="flex-center gap-3 mt-8" />
+        <div id="custom-pagination" className="custom-pagination" />
 
         <div className="custom-navigation">
           <button className="custom-prev">
