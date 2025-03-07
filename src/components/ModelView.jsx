@@ -7,11 +7,11 @@ import { Suspense } from 'react'
 const ModelView = () => {
   return (
     <View
-      className='w-full h-full'
+      className="w-full h-full cursor-pointer select-none"
     >
       <ambientLight intensity={0.8} />
 
-      <PerspectiveCamera makeDefault position={[0, 0, 4]} />
+      <PerspectiveCamera makeDefault position={[-3, 0, 3]} />
 
       <Lights />
 
@@ -25,7 +25,7 @@ const ModelView = () => {
 
       <group position={[0, -1 ,0]}>
         <Suspense fallback={<Html><div>Loading...</div></Html>}>
-          <HighHeels scale={[12, 12, 12]}/>
+          <HighHeels scale={[12, 12, 12]} />
         </Suspense>
       </group>
     </View>
