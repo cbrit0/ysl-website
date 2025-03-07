@@ -54,6 +54,8 @@ import fragrances from '/assets/images/fragrances.jpg'
 import parfums from '/assets/images/parfums.jpg'
 import skincare from '/assets/images/skincare.jpg'
 
+import heroBanner from '/assets/images/hero-banner.jpg'
+
 export const yslImg = ysl
 export const yslHorizontalWhiteImg = yslHorizontalWhite
 export const yslHorizontalBlackImg = yslHorizontalBlack
@@ -109,3 +111,5 @@ export const makeupImg = makeup
 export const fragrancesImg = fragrances
 export const parfumsImg = parfums
 export const skincareImg = skincare
+
+export const heroBannerImg = heroBanner
