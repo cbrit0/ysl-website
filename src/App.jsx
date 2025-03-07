@@ -15,8 +15,8 @@ const App = () => {
       </div>
       <Shades />
       <QuickLinks />
-      <Model />
       <HypeOnSocial />
+      <Model />
       <Discover />
     </main>
   );
