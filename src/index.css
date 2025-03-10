@@ -54,7 +54,7 @@
 }
 
 @utility control-btn {
-  @apply absolute left-4 bottom-4 rounded-full bg-white flex-center h-10 w-10 border
+  @apply absolute left-4 bottom-4 rounded-full bg-white flex-center h-10 w-10 border cursor-pointer
 }
 
 @utility splide__arrow {
