@@ -7,7 +7,7 @@ const Shades = () => {
 
   const handleSlideChange = (index) => {
     setActiveSlideBackground(shades[index].image)
-  };
+  }
 
   return (
     <section 

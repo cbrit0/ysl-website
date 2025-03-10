@@ -57,18 +57,6 @@
   @apply absolute left-4 bottom-4 rounded-full bg-white flex-center h-10 w-10 border cursor-pointer
 }
 
-@utility splide__arrow {
-  @apply flex items-center justify-center bg-white shadow-xs shadow-black cursor-pointer h-10 w-10 p-0 absolute top-[55%] z-10
-}
-
-@utility splide__arrow--prev {
-  @apply -left-10
-}
-
-@utility splide__arrow--next {
-  @apply -right-10
-}
-
 @utility quicklink-containter {
   @apply flex-center border-gray-300 border rounded-full hover:border-black hover:cursor-pointer
 }
@@ -87,4 +75,8 @@
 
 @utility discover-button {
   @apply h-14 w-full flex-center border mt-4 font-medium hover:border-2 cursor-pointer select-none
+}
+
+@utility discover-shades-button {
+  @apply text-white bg-black w-[98%] font-semibold text-center pt-3 pb-4 text-sm mt-4 cursor-pointer
 }
