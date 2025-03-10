@@ -5,11 +5,6 @@ import yslHorizontalBlack from '/assets/images/yslHorizontalBlack.svg'
 import hmv from '/assets/videos/hero.mp4'
 import smallmv from '/assets/videos/smallHero.mp4'
 
-import y from '/assets/images/yEauDeParfum.png'
-import monParis from '/assets/images/monParisEauDeParfum.png'
-import blackOpium from '/assets/images/blackOpiumEauDeParfum.png'
-import myslf from '/assets/images/myslfEauDeParfum.png'
-
 import firstHighlight from '/assets/videos/v-1e7d6c74-b852-43f2-b9c5-62e4164ecf5b.mp4'
 import secondHighlight from '/assets/videos/v-4dd63971-0016-4451-bb66-449b086881b5.mp4'
 import thirdHighlight from '/assets/videos/v-337ae941-64bc-49af-92be-8d1cc946f66c.mp4'
@@ -38,12 +33,6 @@ import pinkVoltage from '/assets/images/shades/87_PINK VOLTAGE_web.jpg'
 import restlessRoseBg from '/assets/images/shades/shade-93_main.png'
 import restlessRose from '/assets/images/shades/93_RESTLESS ROSE_web.jpg'
 
-import play from '/assets/images/play.svg'
-import pause from '/assets/images/pause.svg'
-
-import leftArrow from '/assets/images/chevron2-left.svg'
-import rightArrow from '/assets/images/chevron2-right.svg'
-
 import bog1 from '/assets/images/quicklinks/bog-quicklinks-img1.jpg'
 import bog2 from '/assets/images/quicklinks/bog-quicklinks-img2.jpg'
 import bog3 from '/assets/images/quicklinks/bog-quicklinks-img3.jpg'
@@ -63,18 +52,10 @@ export const yslHorizontalBlackImg = yslHorizontalBlack
 export const heroVideo = hmv
 export const smallHeroVideo = smallmv
 
-export const yImg = y
-export const monParisImg = monParis
-export const blackOpiumImg = blackOpium
-export const myslfImg = myslf
-
 export const firstHighlightVideo = firstHighlight
 export const secondHighlightVideo = secondHighlight
 export const thirdHighlightVideo = thirdHighlight
 export const fourthHighlightVideo = fourthHighlight
-
-export const playImg = play
-export const pauseImg = pause
 
 export const coralClashBgImg = coralClashBg
 export const coralClashImg = coralClash
@@ -98,9 +79,6 @@ export const pinkVoltageBgImg = pinkVoltageBg
 export const pinkVoltageImg = pinkVoltage
 export const restlessRoseBgImg = restlessRoseBg
 export const restlessRoseImg = restlessRose
-
-export const leftArrowImg = leftArrow
-export const rightArrowImg = rightArrow
 
 export const bog1Img = bog1
 export const bog2Img = bog2

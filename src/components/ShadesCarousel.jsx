@@ -2,7 +2,6 @@ import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css/core';
 import { shades } from "../constants";
 import { useState, useEffect, useRef } from 'react';
-import { leftArrowImg, rightArrowImg } from '../utils';
 
 const splideOptions = {
   type: 'loop',
@@ -75,12 +74,12 @@ const ShadesCarousel = ({ onSlideChange }) => {
         <div className="splide__arrows">
           <button className="splide__arrow splide__arrow--prev flex-center">
             <div className='h-full ml-4 mr-5 flex items-center'>
-              <img src={leftArrowImg} alt="Previous" />
+              &#10094;
             </div>
           </button>
           <button className="splide__arrow splide__arrow--next">
             <div className='h-full ml-5 mr-4 flex items-center'>
-              <img src={rightArrowImg} alt="Next" />
+              &#10095;
             </div>
           </button>
         </div>
