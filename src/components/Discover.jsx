@@ -14,11 +14,11 @@ const Discover = () => {
 
         <Swiper
           modules={[Navigation, Pagination]}
-          spaceBetween={0}
+          spaceBetween={20}
           slidesPerView={1}
           navigation={{
-            nextEl: '.custom-next',
-            prevEl: '.custom-prev',
+            nextEl: '#custom-next',
+            prevEl: '#custom-prev',
           }}
           pagination={{
             clickable: true,
@@ -38,7 +38,7 @@ const Discover = () => {
         >
           {categories.map((category, index) => (
             <SwiperSlide key={index}>
-              <div className="flex-col p-2">
+              <div className="flex-col">
                 <img src={category.image} alt={category.name} />
                 <p 
                   className={`mt-6 font-bold text-xl flex-center ${index === 2 ? 'mb-5' : 'mb-12'}`}
@@ -55,10 +55,10 @@ const Discover = () => {
         <div id="custom-pagination" className="custom-pagination" />
 
         <div className="custom-navigation">
-          <button className="custom-prev">
+          <button id="custom-prev" className="custom-prev">
             &#10094;
           </button>
-          <button className="custom-next">
+          <button id="custom-next" className="custom-next">
             &#10095;
           </button>
         </div>

@@ -1,6 +1,13 @@
-import { highlightsSlides } from "../constants";
-import { playImg, pauseImg } from "../utils";
-import { useState, useRef, createRef } from "react";
+import { highlightsSlides } from "../constants"
+import { useState, useRef, createRef } from "react"
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation, Pagination } from 'swiper/modules'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faPlay, faPause } from "@fortawesome/free-solid-svg-icons"
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import '../styles.css'
 
 const VideoCarousel = () => {
   const [videoStates, setVideoStates] = useState(
@@ -28,54 +35,81 @@ const VideoCarousel = () => {
 
   return (
     <>
-      <div className="flex items-center gap-2">
-        {highlightsSlides.map((slide, i) => (
-          <div key={slide.id} id="slider" className="flex-1">
-            <div className="flex-center flex-col mb-4">
-              <div className="h-12 w-full mt-6 flex-center">
-                <div className="h-full w-70">
-                  <p 
-                    className="text-center text-wrap" 
-                    dangerouslySetInnerHTML={{ __html: slide.text }}
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="w-full h-full">
-              <video
-                ref={videoRefs.current[i]}
-                id="video"
-                playsInline={true}
-                className="pointer-events-none"
-                preload="auto"
-                muted
-                autoPlay
-                loop
-              >
-                <source src={slide.video} type="video/mp4" />
-              </video>
-              
-              <button 
-                className="control-btn absolute -translate-y-15 h-10 w-10 cursor-pointer border" 
-                onClick={() => togglePlayPause(i)}
-              >
-                <img
-                  src={videoStates[i].isPlaying ? pauseImg : playImg}
-                  alt={videoStates[i].isPlaying ? "Pause" : "Play"}
-                  className={`${videoStates[i].isPlaying ? 'h-full w-full' : 'h-4 w-4 ml-1'}`}
+      <Swiper
+        modules={[Navigation, Pagination]}
+        spaceBetween={20}
+        slidesPerView={1}
+        navigation={{
+          nextEl: '#custom-next-video',
+          prevEl: '#custom-prev-video',
+        }}
+        pagination={{
+          clickable: true,
+          el: '#custom-pagination-video',
+        }}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          1024: {
+            slidesPerView: 4,
+          },
+        }}
+      >
+        {highlightsSlides.map((slide, index) => (
+          <SwiperSlide key={slide.id}>
+            <div className="flex-center flex-col">
+              <div className="h-12 w-full mt-6 flex-center mb-4">
+                <p 
+                  className="text-center text-wrap w-70" 
+                  dangerouslySetInnerHTML={{ __html: slide.text }}
                 />
-              </button>
-            </div>
+              </div>
 
-            <a className="h-14 w-full flex-center border mt-4 font-medium hover:border-2 cursor-pointer select-none">
-              {slide.button}
-            </a>
-          </div>
+              <div className="relative w-full">
+                <video
+                  ref={videoRefs.current[index]}
+                  playsInline
+                  className="pointer-events-none w-full h-auto"
+                  preload="auto"
+                  muted
+                  autoPlay
+                  loop
+                >
+                  <source src={slide.video} type="video/mp4" />
+                </video>
+
+                <button 
+                  onClick={() => togglePlayPause(index)} 
+                  className="control-btn"
+                >
+                  <FontAwesomeIcon icon={videoStates[index].isPlaying ? faPause : faPlay} />
+                </button>
+              </div>
+
+              <a className="discover-button">
+                {slide.button}
+              </a>
+            </div>
+          </SwiperSlide>
         ))}
+      </Swiper>
+
+      <div id="custom-pagination-video" className="custom-pagination" />
+
+      <div id="custom-navigation-video" className="custom-navigation">
+        <button id="custom-prev-video" className="custom-prev">
+          &#10094;
+        </button>
+        <button id="custom-next-video" className="custom-next">
+          &#10095;
+        </button>
       </div>
     </>
-  );
+  )
 }
 
 export default VideoCarousel
