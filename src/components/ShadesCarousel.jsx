@@ -7,9 +7,9 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import '../styles.css'
 
-const ShadesCarousel = () => {
+const ShadesCarousel = ({ onSlideChange }) => {
   const [activeIndex, setActiveIndex] = useState(0)
-  
+
   return (
     <>
       <Swiper 
@@ -17,7 +17,11 @@ const ShadesCarousel = () => {
         slidesPerView={1}
         loop={true}
         centeredSlides={true}
-        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+        onSlideChange={(swiper) => {
+          const realIndex = swiper.realIndex
+          setActiveIndex(realIndex)
+          onSlideChange(shades[realIndex])
+        }}
         breakpoints={{
           640: {
             slidesPerView: 1,

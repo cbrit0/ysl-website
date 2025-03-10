@@ -1,22 +1,29 @@
+import { useState, useEffect } from "react"
 import ShadesCarousel from "./ShadesCarousel"
-import { shades } from "../constants";
-import { useState } from 'react';
+import { shades } from "../constants"
 
 const Shades = () => {
-  const [activeSlideBackground, setActiveSlideBackground] = useState(shades[0].image)
+  const [activeShade, setActiveShade] = useState(shades[0])
 
-  const handleSlideChange = (index) => {
-    setActiveSlideBackground(shades[index].image)
+  const handleSlideChange = (shade) => {
+    setActiveShade(shade)
   }
+
+  useEffect(() => {
+    shades.forEach((shade) => {
+      const img = new Image()
+      img.src = shade.image
+    })
+  }, [])
 
   return (
     <section 
       id="shades" 
       className="overflow-hidden h-[90vh] common-padding"
-      style={{ 
-        backgroundImage: `url(${activeSlideBackground})`,
-        backgroundSize: "cover",
-        transition: "background-image 0.5s ease-in-out"
+      style={{
+        backgroundImage: `url(${activeShade.image})`,
+        backgroundSize: 'cover',
+        transition: 'background-image 0.5s ease-in-out'
       }}
     >
       <div className="screen-max-width h-full flex-col">
@@ -24,7 +31,7 @@ const Shades = () => {
           <h1 id="title" className="section-heading">COUTURE-INSPIRED SHADES</h1>
         </div>
         
-        <ShadesCarousel onSlideChange={handleSlideChange}/>
+        <ShadesCarousel onSlideChange={handleSlideChange} />
       </div>
     </section>
   )

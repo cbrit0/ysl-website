@@ -49,10 +49,6 @@
   @apply text-black lg:text-3xl md:text-2xl text-2xl lg:mb-0 mb-5 font-bold
 }
 
-@utility carousel-container {
-  @apply  sm:w-[70vw] w-[88vw] md:h-[70vh] sm:h-[50vh] h-[35vh];
-}
-
 @utility control-btn {
   @apply absolute left-4 bottom-4 rounded-full bg-white flex-center h-10 w-10 border cursor-pointer
 }
