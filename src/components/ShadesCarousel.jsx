@@ -22,6 +22,10 @@ const ShadesCarousel = ({ onSlideChange }) => {
           setActiveIndex(realIndex)
           onSlideChange(shades[realIndex])
         }}
+        pagination={{
+          clickable: true,
+          el: '#custom-pagination-shades',
+        }}
         breakpoints={{
           640: {
             slidesPerView: 1,
@@ -65,6 +69,8 @@ const ShadesCarousel = ({ onSlideChange }) => {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      <div id="custom-pagination-shades" className="custom-pagination-shades" />
     </>
   )
 }

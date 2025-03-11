@@ -19,7 +19,7 @@ const Shades = () => {
   return (
     <section 
       id="shades" 
-      className="overflow-hidden h-[90vh] common-padding"
+      className="overflow-hidden h-auto common-padding"
       style={{
         backgroundImage: `url(${activeShade.image})`,
         backgroundSize: 'cover',
