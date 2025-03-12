@@ -54,15 +54,11 @@
 }
 
 @utility quicklink-containter {
-  @apply flex-center border-gray-300 border rounded-full hover:border-black hover:cursor-pointer
-}
-
-@utility quicklink-text-container {
-  @apply lg:mt-1 lg:mb-1 lg:flex-center
+  @apply flex-center border-gray-300 border rounded-full hover:border-black hover:cursor-pointer inline-flex pl-1 pr-2 pt-1 pb-1 gap-2
 }
 
 @utility quicklink-text {
-  @apply lg:font-bold lg:ml-2 text-sm
+  @apply font-normal md:font-bold lg:font-bold text-sm
 }
 
 @utility discover-now-button {
