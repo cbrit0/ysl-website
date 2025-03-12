@@ -13,6 +13,7 @@ const ShadesCarousel = ({ onSlideChange }) => {
   return (
     <>
       <Swiper 
+        className='border'
         modules={[Navigation, Pagination]}
         slidesPerView={1}
         loop={true}
@@ -43,12 +44,12 @@ const ShadesCarousel = ({ onSlideChange }) => {
         }}
       >
         {shades.map((shade, i) => (
-          <SwiperSlide key={shade.id} className="flex-center h-full">
+          <SwiperSlide key={shade.id} className="flex-center h-full border">
             <div className="flex-center flex-col">
               <img 
                 src={shade.backgroundImg} 
                 alt={shade.colorName}
-                className="cursor-pointer transition-all ease-in-out duration-200"
+                className={`${activeIndex !== i && 'w-7/10 h-auto mt-12'} cursor-pointer transition-none`}
               />
               
               {activeIndex === i && (
