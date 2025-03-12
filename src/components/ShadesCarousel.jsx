@@ -22,6 +22,10 @@ const ShadesCarousel = ({ onSlideChange }) => {
           setActiveIndex(realIndex)
           onSlideChange(shades[realIndex])
         }}
+        navigation={{
+          nextEl: '#custom-next-shades',
+          prevEl: '#custom-prev-shades',
+        }}
         pagination={{
           clickable: true,
           el: '#custom-pagination-shades',
@@ -71,6 +75,15 @@ const ShadesCarousel = ({ onSlideChange }) => {
       </Swiper>
 
       <div id="custom-pagination-shades" className="custom-pagination-shades" />
+
+      <div id="custom-navigation-shades" className="custom-navigation-shades">
+        <button id="custom-prev-shades" className="custom-prev-shades">
+          &#10094;
+        </button>
+        <button id="custom-next-shades" className="custom-next-shades">
+          &#10095;
+        </button>
+      </div>
     </>
   )
 }
