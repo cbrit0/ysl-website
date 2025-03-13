@@ -64,7 +64,7 @@ const Navbar = () => {
   return (
     <header 
       ref={headerRef}
-      className="absolute top-0 left-0 w-full py-5 sm:px-10 px-5 z-10 group"
+      className="absolute top-0 left-0 w-full py-5 sm:px-10 px-5 z-20 group"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
