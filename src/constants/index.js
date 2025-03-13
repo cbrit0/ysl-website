@@ -1,6 +1,6 @@
 import { firstHighlightVideo, secondHighlightVideo, thirdHighlightVideo, fourthHighlightVideo, coralClashBgImg, coralClashImg, berryBangBgImg, berryBangImg, nudeLavalliereBgImg, nudeLavalliereImg, lavenderLustBgImg, lavenderLustImg, peachyNudeBgImg, peachyNudeImg, restlessRoseBgImg, restlessRoseImg, nocturnalNudeBgImg, nocturnalNudeImg, pinkVoltageBgImg, pinkVoltageImg, roseHazeBgImg, roseHazeImg, babydollPinkBgImg, babydollPinkImg, suaveSunstoneBgImg, suaveSunstoneImg, makeupImg, fragrancesImg, parfumsImg, skincareImg } from '../utils'
 
-export const navList = ['MAKEUP', 'FRAGRANCE', 'SKINCARE']
+export const navList = ['OFFERS & GIFTS', 'NEW & ICONS', 'MAKEUP', 'FRAGRANCE', 'SKINCARE', 'OUR SERVICES', 'OUR COMMITMENTS', 'OUR NEWS', 'YSL BEAUTY CLUB']
 
 export const shades = [
   {
