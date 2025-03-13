@@ -6,6 +6,7 @@ import { navList } from '../constants'
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false)
   const [isSticky, setIsSticky] = useState(false)
+  const [isAtTop, setIsAtTop] = useState(true)
   const headerRef = useRef(null)
   const lastScrollY = useRef(0)
 
@@ -14,11 +15,16 @@ const Navbar = () => {
       const currentScrollY = window.scrollY
 
       if (currentScrollY === 0) {
+        setIsAtTop(true)
         setIsSticky(false)
-      } else if (currentScrollY > lastScrollY.current) {
-        setIsSticky(false)
-      } else if (currentScrollY < lastScrollY.current) {
-        setIsSticky(true)
+      } else {
+        setIsAtTop(false)
+
+        if (currentScrollY > lastScrollY.current) {
+          setIsSticky(false)
+        } else if (currentScrollY < lastScrollY.current) {
+          setIsSticky(true)
+        }
       }
 
       lastScrollY.current = currentScrollY
@@ -34,15 +40,18 @@ const Navbar = () => {
   useEffect(() => {
     const headerElement = headerRef.current
 
-    if (isSticky && window.scrollY !== 0) {
-      gsap.to(headerElement, {
-        position: 'fixed',
-        top: 0,
-        duration: 0.3,
-        ease: 'power2.out'
-      })
-      headerElement.style.transition = 'none'
-      headerElement.style.backgroundColor = 'white'
+    if (isSticky && !isAtTop) {
+      gsap.fromTo(
+        headerElement,
+        { top: '-100%' },
+        {
+          top: 0,
+          position: 'fixed',
+          backgroundColor: 'white',
+          duration: 0.3,
+          ease: 'power2.out'
+        }
+      )
     } else {
       gsap.to(headerElement, {
         position: 'absolute',
@@ -51,7 +60,7 @@ const Navbar = () => {
         ease: 'power2.out'
       })
 
-      if (window.scrollY === 0) {
+      if (isAtTop) {
         headerElement.style.transition = 'background-color 0.3s ease'
         headerElement.style.backgroundColor = isHovered ? 'white' : 'transparent'
       } else {
@@ -59,7 +68,7 @@ const Navbar = () => {
         headerElement.style.backgroundColor = isHovered ? 'white' : 'transparent'
       }
     }
-  }, [isSticky, isHovered])
+  }, [isSticky, isHovered, isAtTop])
 
   return (
     <header 
@@ -68,15 +77,17 @@ const Navbar = () => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="flex-center">
-        <img 
-          src={isSticky || isHovered ? yslHorizontalBlackImg : yslHorizontalWhiteImg} 
-          alt="YSL"
-          className="cursor-pointer"
-        />
-      </div>
+      {isAtTop && (
+        <div className="flex justify-center">
+          <img 
+            src={isHovered ? yslHorizontalBlackImg : yslHorizontalWhiteImg} 
+            alt="YSL"
+            className="cursor-pointer mb-4"
+          />
+        </div>
+      )}
 
-      <nav className="flex-center mt-4">
+      <nav className="flex justify-center">
         <div className="flex flex-wrap justify-center gap-4 max-sm:gap-2">
           {navList.map((nav) => (
             <div
