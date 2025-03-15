@@ -87,22 +87,22 @@ const Navbar = () => {
           <img 
             src={isHovered ? yslHorizontalBlackImg : yslHorizontalWhiteImg} 
             alt="YSL"
-            className="cursor-pointer mb-4"
+            className="cursor-pointer mb-10"
           />
         </div>
       )}
 
       <nav className="flex justify-center">
-        <div className="flex flex-wrap justify-center gap-4 max-sm:gap-2">
-          {navList.map((nav) => (
-            <div
-              key={nav}
-              className={`px-3 text-sm cursor-pointer ${
+        <div className="flex flex-wrap justify-center gap-12 max-sm:gap-2">
+          {navList.map((nav, index) => (
+            <p
+              key={index}
+              className={`text-[12px] font-bold text-sm cursor-pointer ${
                 isSticky || isHovered ? 'text-black' : 'text-white'
               } hover:text-gray-400`}
             >
               {nav}
-            </div>
+            </p>
           ))}
         </div>
       </nav>
