@@ -67,7 +67,7 @@ const Navbar = () => {
       gsap.to(headerElement, {
         position: 'absolute',
         top: 0,
-        duration: 0.3,
+        duration: 0.2,
         ease: 'power2.out'
       })
     }
