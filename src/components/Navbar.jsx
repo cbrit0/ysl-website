@@ -59,7 +59,6 @@ const Navbar = () => {
         {
           top: 0,
           position: 'fixed',
-          backgroundColor: 'white',
           duration: 0.3,
           ease: 'power2.out'
         }
@@ -71,21 +70,15 @@ const Navbar = () => {
         duration: 0.3,
         ease: 'power2.out'
       })
-
-      if (isAtTop) {
-        headerElement.style.transition = 'background-color 0.3s ease'
-        headerElement.style.backgroundColor = isHovered ? 'white' : 'transparent'
-      } else {
-        headerElement.style.transition = 'none'
-        headerElement.style.backgroundColor = isHovered ? 'white' : 'transparent'
-      }
     }
-  }, [isSticky, isHovered, isAtTop])
+  }, [isSticky, isAtTop])
 
   return (
     <header 
       ref={headerRef}
-      className="absolute top-0 left-0 w-full py-5 sm:px-10 px-5 z-20 group"
+      className={`absolute top-0 left-0 w-full py-5 sm:px-10 px-5 z-20 group ${
+        isSticky || isHovered ? 'bg-white' : 'bg-transparent'
+      } transition-colors duration-300 ease-in`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
