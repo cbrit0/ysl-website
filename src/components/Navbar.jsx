@@ -10,6 +10,18 @@ const Navbar = () => {
   const headerRef = useRef(null)
   const lastScrollY = useRef(0)
 
+  const handleMouseEnter = () => {
+    if (isAtTop) {
+      setIsHovered(true)
+    }
+  }
+
+  const handleMouseLeave = () => {
+    if (isAtTop) {
+      setIsHovered(false)
+    }
+  }
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
@@ -74,8 +86,8 @@ const Navbar = () => {
     <header 
       ref={headerRef}
       className="absolute top-0 left-0 w-full py-5 sm:px-10 px-5 z-20 group"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       {isAtTop && (
         <div className="flex justify-center">
