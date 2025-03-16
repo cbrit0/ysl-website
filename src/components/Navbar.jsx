@@ -1,8 +1,11 @@
-import { use, useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { gsap } from "gsap"
 import { yslHorizontalWhiteImg, yslHorizontalBlackImg } from "../utils"
 import { navList } from '../constants'
 import { useGSAP } from "@gsap/react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass, faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
+
 
 gsap.registerPlugin(useGSAP)
 
@@ -11,6 +14,7 @@ const Navbar = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null)
   const [isSticky, setIsSticky] = useState(false)
   const [isAtTop, setIsAtTop] = useState(true)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const lastScrollY = useRef(0)
   const headerRef = useRef(null)
 
@@ -24,6 +28,10 @@ const Navbar = () => {
     if (isAtTop) {
       setIsHovered(false)
     }
+  }
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
   }
 
   useEffect(() => {
@@ -83,21 +91,27 @@ const Navbar = () => {
     <header
       ref={headerRef}
       id="header"
-      className={`absolute top-0 left-0 w-full pt-5 px-5 z-20 ${
+      className={`absolute top-0 left-0 w-full py-3.5 md:pt-5 md:pb-0 px-4 md:px-5 z-20 ${
         isHovered ? 'bg-white' : 'bg-transparent'
       } transition-colors duration-300 ease-in`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="flex-center mb-6">
+      <div className="flex items-center justify-between md:justify-center md:mb-6">
         <img 
           src={isHovered ? yslHorizontalBlackImg : yslHorizontalWhiteImg} 
           alt="YSL"
-          className="cursor-pointer"
+          className="cursor-pointer w-28 md:w-auto"
         />
+
+        <div className="md:hidden">
+        <FontAwesomeIcon icon={faMagnifyingGlass} className={`mr-8 ${isHovered ? 'text-black' : 'text-white'}`} />
+
+        <FontAwesomeIcon icon={isMenuOpen ? faXmark : faBars} className={`${isHovered ? 'text-black' : 'text-white'}`} onClick={toggleMenu} />
+        </div>
       </div>
 
-      <nav id="navbar" className="flex-center gap-2">
+      <nav id="navbar" className="hidden md:flex-center gap-2">
         {navList.map((nav, index) => (
           <div
             key={index}
@@ -112,7 +126,7 @@ const Navbar = () => {
         ))}
       </nav>
 
-      <nav id="sticky-navbar" className="sticky-navbar">
+      <nav id="sticky-navbar" className="hidden md:sticky-navbar">
         {navList.map((nav, index) => (
           <div
             key={index}
