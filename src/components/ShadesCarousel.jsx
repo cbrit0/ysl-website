@@ -63,7 +63,7 @@ const ShadesCarousel = ({ onSlideChange }) => {
                       </span>
                       <p className="text-xs text-center">{shade.colorName}</p>
                     </div>
-                    <div className="text-white bg-black w-[98%] font-semibold text-center pt-3 pb-4 text-sm mt-4 cursor-pointer">
+                    <div className="discover-shades-button">
                       DISCOVER
                     </div>
                   </div>
