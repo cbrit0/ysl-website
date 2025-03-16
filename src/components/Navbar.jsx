@@ -5,6 +5,7 @@ import { navList } from '../constants'
 
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false)
+  const [hoveredIndex, setHoveredIndex] = useState(null)
   const [isSticky, setIsSticky] = useState(false)
   const [isAtTop, setIsAtTop] = useState(true)
   const headerRef = useRef(null)
@@ -76,7 +77,7 @@ const Navbar = () => {
   return (
     <header 
       ref={headerRef}
-      className={`absolute top-0 left-0 w-full py-5 sm:px-10 px-5 z-20 group ${
+      className={`absolute top-0 left-0 w-full pt-5 sm:px-10 px-5 z-20 group ${
         isSticky || isHovered ? 'bg-white' : 'bg-transparent'
       } transition-colors duration-300 ease-in`}
       onMouseEnter={handleMouseEnter}
@@ -93,13 +94,17 @@ const Navbar = () => {
       )}
 
       <nav className="flex justify-center">
-        <div className="flex flex-wrap justify-center gap-12 max-sm:gap-2">
+        <div className="flex flex-wrap justify-center gap-2">
           {navList.map((nav, index) => (
             <p
               key={index}
-              className={`text-[12px] font-bold text-sm cursor-pointer ${
+              className={`text-[11px] font-bold text-sm cursor-pointer pb-4 pl-4 pr-4 ${
                 isSticky || isHovered ? 'text-black' : 'text-white'
-              } hover:text-gray-400`}
+              } ${
+                hoveredIndex === index && 'border-b-3'
+              }`}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
             >
               {nav}
             </p>

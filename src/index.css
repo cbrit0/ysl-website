@@ -37,10 +37,6 @@
   @apply flex items-center justify-center
 }
 
-@utility nav-height {
-  @apply h-[calc(100vh-60px)]
-}
-
 @utility common-padding {
   @apply sm:py-16 py-10 sm:px-5 px-3
 }
