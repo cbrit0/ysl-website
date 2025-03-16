@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { use, useEffect, useRef, useState } from "react"
 import { gsap } from "gsap"
 import { yslHorizontalWhiteImg, yslHorizontalBlackImg } from "../utils"
 import { navList } from '../constants'
@@ -9,9 +9,11 @@ gsap.registerPlugin(useGSAP)
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false)
   const [hoveredIndex, setHoveredIndex] = useState(null)
+  const [hoverdStickyIndex, setHoveredStickyIndex] = useState(null)
   const [isSticky, setIsSticky] = useState(false)
   const [isAtTop, setIsAtTop] = useState(true)
   const lastScrollY = useRef(0)
+  const headerRef = useRef(null)
 
   const handleMouseEnter = () => {
     if (isAtTop) {
@@ -29,7 +31,7 @@ const Navbar = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
 
-      if (currentScrollY === 0) {
+      if (currentScrollY <= headerRef.current.offsetHeight) {
         setIsAtTop(true)
         setIsSticky(false)
       } else {
@@ -80,6 +82,7 @@ const Navbar = () => {
 
   return (
     <header
+      ref={headerRef}
       id="header"
       className={`absolute top-0 left-0 w-full pt-5 px-5 z-20 ${
         isHovered ? 'bg-white' : 'bg-transparent'
@@ -110,13 +113,13 @@ const Navbar = () => {
         ))}
       </nav>
 
-      <nav id="sticky-navbar" className="absolute top-0 left-0 w-full z-30 flex-center gap-12 bg-white">
+      <nav id="sticky-navbar" className="sticky-navbar">
         {navList.map((nav, index) => (
           <div
             key={index}
-            className={`p-4 cursor-pointer ${hoveredIndex === index ? 'border-b-3' : ''}`}
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
+            className={`p-4 cursor-pointer ${hoverdStickyIndex === index ? 'border-b-3' : ''}`}
+            onMouseEnter={() => setHoveredStickyIndex(index)}
+            onMouseLeave={() => setHoveredStickyIndex(null)}
           >
             <p className="text-[11px] font-bold text-sm">
               {nav}
