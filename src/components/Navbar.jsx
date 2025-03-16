@@ -9,7 +9,6 @@ gsap.registerPlugin(useGSAP)
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false)
   const [hoveredIndex, setHoveredIndex] = useState(null)
-  const [hoverdStickyIndex, setHoveredStickyIndex] = useState(null)
   const [isSticky, setIsSticky] = useState(false)
   const [isAtTop, setIsAtTop] = useState(true)
   const lastScrollY = useRef(0)
@@ -58,7 +57,7 @@ const Navbar = () => {
     if (isSticky && !isAtTop) {
       gsap.fromTo(
         '#sticky-navbar',
-        { y: '-99%' },
+        { y: '-105%' },
         {
           y: 0,
           position: 'fixed',
@@ -71,7 +70,7 @@ const Navbar = () => {
         '#sticky-navbar',
         { top: 0 },
         {
-          y: '-99%',
+          y: '-105%',
           position: 'fixed',
           duration: 0.2,
           ease: 'power2.out'
@@ -102,11 +101,11 @@ const Navbar = () => {
         {navList.map((nav, index) => (
           <div
             key={index}
-            className={`p-4 cursor-pointer ${hoveredIndex === index ? 'border-b-3' : ''}`}
+            className={`p-4 cursor-pointer border-b-3 ${isHovered && hoveredIndex === index ? 'border-black' : 'border-transparent'}`}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
-            <p className={`text-[11px] font-bold text-sm ${isHovered ? 'text-black' : 'text-white'}`}>
+            <p className={`flex-center text-[11px] font-bold ${isHovered ? 'text-black' : 'text-white'}`}>
               {nav}
             </p>
           </div>
@@ -117,11 +116,11 @@ const Navbar = () => {
         {navList.map((nav, index) => (
           <div
             key={index}
-            className={`p-4 cursor-pointer ${hoverdStickyIndex === index ? 'border-b-3' : ''}`}
-            onMouseEnter={() => setHoveredStickyIndex(index)}
-            onMouseLeave={() => setHoveredStickyIndex(null)}
+            className={`p-4 cursor-pointer border-b-3 ${hoveredIndex === index ? 'border-black' : 'border-transparent'}`}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
           >
-            <p className="text-[11px] font-bold text-sm">
+            <p className="flex-center w-18 h-8 text-[11px] font-bold">
               {nav}
             </p>
           </div>

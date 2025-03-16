@@ -42,7 +42,7 @@
 }
 
 @utility sticky-navbar {
-  @apply absolute top-0 left-0 w-full z-30 flex-center gap-12 bg-white
+  @apply absolute top-0 left-0 w-full z-30 flex-center gap-20 bg-white
 }
 
 @utility section-heading {
