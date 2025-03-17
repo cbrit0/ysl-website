@@ -1,18 +1,13 @@
-import { useEffect, useRef, useState } from "react"
+import { forwardRef, useState } from "react"
 import { yslHorizontalWhiteImg, yslHorizontalBlackImg } from "../utils"
 import { navList } from '../constants'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
-import StickyNavbar from "./StickyNavbar"
 
-const Navbar = () => {
+const Navbar = forwardRef(({ isAtTop }, ref) => {
   const [isHovered, setIsHovered] = useState(false)
   const [hoveredIndex, setHoveredIndex] = useState(null)
-  const [isSticky, setIsSticky] = useState(false)
-  const [isAtTop, setIsAtTop] = useState(true)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const lastScrollY = useRef(0)
-  const headerRef = useRef(null)
 
   const handleMouseEnter = () => {
     if (isAtTop) {
@@ -30,36 +25,9 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY
-
-      if (currentScrollY <= headerRef.current.offsetHeight) {
-        setIsAtTop(true)
-        setIsSticky(false)
-      } else {
-        setIsAtTop(false)
-
-        if (currentScrollY > lastScrollY.current) {
-          setIsSticky(false)
-        } else if (currentScrollY < lastScrollY.current) {
-          setIsSticky(true)
-        }
-      }
-
-      lastScrollY.current = currentScrollY
-    }
-
-    window.addEventListener('scroll', handleScroll)
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
-
   return (
     <header
-      ref={headerRef}
+      ref={ref}
       id="header"
       className={`absolute top-0 left-0 w-full py-3.5 md:pt-5 md:pb-0 px-4 md:px-5 z-20 ${
         isHovered ? 'bg-white' : 'bg-transparent'
@@ -95,10 +63,8 @@ const Navbar = () => {
           </div>
         ))}
       </nav>
-
-      <StickyNavbar isSticky={isSticky} isAtTop={isAtTop} />
     </header>
   )
-}
+})
 
 export default Navbar

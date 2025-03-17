@@ -1,3 +1,5 @@
+import { useEffect, useState, useRef } from "react";
+import StickyNavbar from "./components/StickyNavbar";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Model from "./components/Model";
@@ -7,12 +9,43 @@ import QuickLinks from "./components/QuickLinks";
 import Discover from "./components/Discover";
 
 const App = () => {
+  const [isSticky, setIsSticky] = useState(false)
+  const [isAtTop, setIsAtTop] = useState(true)
+  const headerRef = useRef(null)
+  const lastScrollY = useRef(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+
+      if (currentScrollY <= headerRef.current.offsetHeight) {
+        setIsAtTop(true)
+        setIsSticky(false)
+      } else {
+        setIsAtTop(false)
+
+        if (currentScrollY > lastScrollY.current) {
+          setIsSticky(false)
+        } else if (currentScrollY < lastScrollY.current) {
+          setIsSticky(true)
+        }
+      }
+
+      lastScrollY.current = currentScrollY
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      }
+  }, [])
+
   return (
     <main className="bg-white">
-      <div className="relative">
-        <Navbar />
-        <Hero />
-      </div>
+      <Navbar isAtTop={isAtTop} ref={headerRef} />
+      <StickyNavbar isSticky={isSticky} isAtTop={isAtTop} />
+      <Hero />
       <Shades />
       <QuickLinks />
       <HypeOnSocial />
