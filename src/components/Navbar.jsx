@@ -40,11 +40,17 @@ const Navbar = forwardRef(( { isAtTop }, ref ) => {
         {navList.map((nav, index) => (
           <div
             key={index}
-            className={`p-4 cursor-pointer border-b-3 ${isHovered && hoveredIndex === index ? 'border-black' : 'border-transparent'}`}
+            className={`p-4 cursor-pointer border-b-3 ${
+              isHovered && hoveredIndex === index ? 'border-black' : 'border-transparent'
+            }`}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
-            <p className={`flex-center text-[11px] font-bold ${isHovered ? 'text-black' : 'text-white'}`}>
+            <p
+              className={`flex-center text-[11px] font-bold ${
+                isHovered ? 'text-black' : 'text-white'
+              }`}
+            >
               {nav}
             </p>
           </div>

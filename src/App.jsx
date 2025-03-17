@@ -7,6 +7,7 @@ import HypeOnSocial from "./components/HypeOnSocial";
 import Shades from "./components/Shades";
 import QuickLinks from "./components/QuickLinks";
 import Discover from "./components/Discover";
+import SlideableMenu from "./components/SlideableMenu";
 
 const App = () => {
   const [isSticky, setIsSticky] = useState(false)
@@ -43,8 +44,13 @@ const App = () => {
 
   return (
     <main className="bg-white">
-      <Navbar isAtTop={isAtTop} ref={headerRef} />
-      <StickyNavbar isSticky={isSticky} isAtTop={isAtTop} />
+      <div className="hidden md:flex">
+        <Navbar isAtTop={isAtTop} ref={headerRef} />
+        <StickyNavbar isSticky={isSticky} isAtTop={isAtTop} />
+      </div>
+      <div className="flex md:hidden">
+        <SlideableMenu />
+      </div>
       <Hero />
       <Shades />
       <QuickLinks />
