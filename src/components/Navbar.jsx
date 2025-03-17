@@ -1,13 +1,9 @@
 import { useEffect, useRef, useState } from "react"
-import { gsap } from "gsap"
 import { yslHorizontalWhiteImg, yslHorizontalBlackImg } from "../utils"
 import { navList } from '../constants'
-import { useGSAP } from "@gsap/react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
-
-
-gsap.registerPlugin(useGSAP)
+import StickyNavbar from "./StickyNavbar"
 
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false)
@@ -61,32 +57,6 @@ const Navbar = () => {
     }
   }, [])
 
-  useGSAP(() => {
-    if (isSticky && !isAtTop) {
-      gsap.fromTo(
-        '#sticky-navbar',
-        { y: '-105%' },
-        {
-          y: 0,
-          position: 'fixed',
-          duration: 0.2,
-          ease: 'power2.out'
-        }
-      )
-    } else {
-      gsap.fromTo(
-        '#sticky-navbar',
-        { top: 0 },
-        {
-          y: '-105%',
-          position: 'fixed',
-          duration: 0.2,
-          ease: 'power2.out'
-        }
-      )
-    }
-  }, [isSticky, isAtTop])
-
   return (
     <header
       ref={headerRef}
@@ -126,20 +96,7 @@ const Navbar = () => {
         ))}
       </nav>
 
-      <nav id="sticky-navbar" className="hidden md:sticky-navbar">
-        {navList.map((nav, index) => (
-          <div
-            key={index}
-            className={`p-4 cursor-pointer border-b-3 ${hoveredIndex === index ? 'border-black' : 'border-transparent'}`}
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
-          >
-            <p className="flex-center w-18 h-8 text-[11px] font-bold">
-              {nav}
-            </p>
-          </div>
-        ))}
-      </nav>
+      <StickyNavbar isSticky={isSticky} isAtTop={isAtTop} />
     </header>
   )
 }
