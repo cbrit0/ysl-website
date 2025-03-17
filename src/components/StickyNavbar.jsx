@@ -32,7 +32,7 @@ const StickyNavbar = ({ isSticky, isAtTop }) => {
   }, [isSticky, isAtTop])
 
   return (
-    <nav id="sticky-navbar" className="hidden md:sticky-navbar">
+    <nav id="sticky-navbar" className="sticky-navbar">
       {navList.map((nav, index) => (
         <div
           key={index}
