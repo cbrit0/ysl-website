@@ -13,8 +13,13 @@ import MiniNavbar from "./components/MiniNavbar"
 const App = () => {
   const [isSticky, setIsSticky] = useState(false)
   const [isAtTop, setIsAtTop] = useState(true)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const headerRef = useRef(null)
   const lastScrollY = useRef(0)
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,8 +55,8 @@ const App = () => {
         <StickyNavbar isSticky={isSticky} isAtTop={isAtTop} />
       </div>
       <div className="flex md:hidden">
-        <MiniNavbar />
-        <SlideableMenu />
+        <MiniNavbar isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}/>
+        <SlideableMenu isMenuOpen={isMenuOpen}/>
       </div>
       <Hero />
       <Shades />

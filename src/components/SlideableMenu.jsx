@@ -1,8 +1,38 @@
 import { navList } from "../constants"
+import gsap from "gsap"
+import { useGSAP } from "@gsap/react"
 
-const SlideableMenu = () => {
+gsap.registerPlugin(useGSAP)
+
+const SlideableMenu = ({ isMenuOpen }) => {
+  useGSAP(() => {
+    if (isMenuOpen) {
+      gsap.fromTo(
+        '#slideable-menu',
+        { x: '100%' },
+        { 
+          x: 0,
+          position: 'fixed',
+          duration: 0.5,
+          ease: 'power2.out'
+        }
+      )
+    } else {
+      gsap.fromTo(
+        '#slideable-menu',
+        { x: 0 },
+        {
+          x: '100%',
+          position: 'fixed',
+          duration: 0.2,
+          ease: 'power2.out'
+        }
+      )
+    }
+  }, [isMenuOpen])
+
   return (
-    <div className="fixed top-14 w-full h-full z-30 bg-white top-shadow">
+    <div id="slideable-menu" className="fixed top-14 w-full h-full z-30 bg-white top-shadow translate-x-[100%]">
       {navList.map((nav, index) => (
         <div 
           key={index} 

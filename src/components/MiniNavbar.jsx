@@ -3,13 +3,8 @@ import { yslHorizontalWhiteImg, yslHorizontalBlackImg } from "../utils"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMagnifyingGlass, faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
 
-const MiniNavbar = () => {
+const MiniNavbar = ({ isMenuOpen, toggleMenu }) => {
   const [isHovered, setIsHovered] = useState(false)
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
 
   return (
     <header
