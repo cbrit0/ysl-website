@@ -72,3 +72,11 @@
 @utility discover-shades-button {
   @apply text-white bg-black w-[98%] font-semibold text-center pt-3 pb-4 text-sm mt-4 cursor-pointer
 }
+
+@utility shadow-bottom {
+  box-shadow: 0 0.5px 0.5px rgba(0, 0, 0, 0.2);
+}
+
+@utility top-shadow {
+  box-shadow: 0 -1px 2px -1px rgba(0, 0, 0, 0.2); /* Darker shadow on top */
+}

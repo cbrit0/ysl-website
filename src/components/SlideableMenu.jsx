@@ -1,39 +1,19 @@
-import { useState } from "react"
-import { yslHorizontalWhiteImg, yslHorizontalBlackImg } from "../utils"
-import { navList } from '../constants'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faMagnifyingGlass, faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
+import { navList } from "../constants"
 
 const SlideableMenu = () => {
-  const [isHovered, setIsHovered] = useState(false)
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
-
   return (
-    <header
-      className={`absolute top-0 left-0 w-full p-4 z-20 ${
-        isHovered ? 'bg-white' : 'bg-transparent'
-      } transition-colors duration-300 ease-in`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <div className="flex items-center justify-between">
-        <img 
-          src={isHovered ? yslHorizontalBlackImg : yslHorizontalWhiteImg} 
-          alt="YSL"
-          className="w-26"
-        />
-
-        <div>
-          <FontAwesomeIcon icon={faMagnifyingGlass} className={`mr-8 ${isHovered ? 'text-black' : 'text-white'}`} />
-
-          <FontAwesomeIcon icon={isMenuOpen ? faXmark : faBars} className={`${isHovered ? 'text-black' : 'text-white'}`} onClick={toggleMenu} />
+    <div className="fixed top-14 w-full h-full z-30 bg-white top-shadow">
+      {navList.map((nav, index) => (
+        <div 
+          key={index} 
+          className={`pl-4 pt-3 pb-3.5 font-bold text-sm shadow-bottom ${
+            index === 0 && 'border-t-[1.5px] border-gray-500/40'
+          }`}
+        >
+          {nav}
         </div>
-      </div>
-    </header>
+      ))}
+    </div>
   )
 }
 
