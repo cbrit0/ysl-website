@@ -1,13 +1,14 @@
-import { useEffect, useState, useRef } from "react";
-import StickyNavbar from "./components/StickyNavbar";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Model from "./components/Model";
-import HypeOnSocial from "./components/HypeOnSocial";
-import Shades from "./components/Shades";
-import QuickLinks from "./components/QuickLinks";
-import Discover from "./components/Discover";
-import SlideableMenu from "./components/SlideableMenu";
+import { useEffect, useState, useRef } from "react"
+import StickyNavbar from "./components/StickyNavbar"
+import Navbar from "./components/Navbar"
+import Hero from "./components/Hero"
+import Model from "./components/Model"
+import HypeOnSocial from "./components/HypeOnSocial"
+import Shades from "./components/Shades"
+import QuickLinks from "./components/QuickLinks"
+import Discover from "./components/Discover"
+import SlideableMenu from "./components/SlideableMenu"
+import MiniNavbar from "./components/MiniNavbar"
 
 const App = () => {
   const [isSticky, setIsSticky] = useState(false)
@@ -49,6 +50,7 @@ const App = () => {
         <StickyNavbar isSticky={isSticky} isAtTop={isAtTop} />
       </div>
       <div className="flex md:hidden">
+        <MiniNavbar />
         <SlideableMenu />
       </div>
       <Hero />
@@ -58,7 +60,7 @@ const App = () => {
       <Model />
       <Discover />
     </main>
-  );
-};
+  )
+}
 
-export default App;
+export default App
