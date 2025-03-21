@@ -49,8 +49,20 @@ const App = () => {
       }
   }, [])
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "auto"
+    }
+
+    return () => {
+      document.body.style.overflow = "auto"
+    }
+  }, [isMenuOpen])
+
   return (
-    <main className={`bg-white ${isMenuOpen ? 'overflow-hidden h-screen' : ''}`}>
+    <main className="bg-white">
       <div className="hidden md:flex">
         <Navbar isAtTop={isAtTop} ref={headerRef} />
         <StickyNavbar isSticky={isSticky} isAtTop={isAtTop} />
