@@ -45,6 +45,10 @@
   @apply absolute top-0 left-0 w-full z-30 flex-center gap-20 bg-white
 }
 
+@utility mini-sticky-navbar {
+  @apply absolute top-0 left-0 w-full p-4 z-20 bg-white
+}
+
 @utility section-heading {
   @apply text-black lg:text-3xl md:text-2xl text-2xl lg:mb-0 mb-5 font-bold
 }

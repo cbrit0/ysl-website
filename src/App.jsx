@@ -9,6 +9,7 @@ import QuickLinks from "./components/QuickLinks"
 import Discover from "./components/Discover"
 import SlideableMenu from "./components/SlideableMenu"
 import MiniNavbar from "./components/MiniNavbar"
+import MiniStickyNavbar from "./components/MiniStickyNavbar"
 
 const App = () => {
   const [isSticky, setIsSticky] = useState(false)
@@ -56,6 +57,7 @@ const App = () => {
       </div>
       <div className="flex md:hidden">
         <MiniNavbar isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}/>
+        <MiniStickyNavbar isSticky={isSticky} isAtTop={isAtTop} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
         <SlideableMenu isMenuOpen={isMenuOpen}/>
       </div>
       <Hero />
