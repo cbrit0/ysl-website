@@ -49,7 +49,7 @@ const App = () => {
   }, [])
 
   return (
-    <main className="bg-white">
+    <main className={`bg-white ${isMenuOpen ? 'overflow-hidden h-screen' : ''}`}>
       <div className="hidden md:flex">
         <Navbar isAtTop={isAtTop} ref={headerRef} />
         <StickyNavbar isSticky={isSticky} isAtTop={isAtTop} />
