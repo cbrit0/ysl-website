@@ -45,6 +45,9 @@ import skincare from '/assets/images/skincare.jpg'
 
 import heroBanner from '/assets/images/hero-banner.jpg'
 
+import yslBeautyClub from '/assets/images/ysl-beauty-club.jpg'
+import smallYslBeautyClub from '/assets/images/small-ysl-beauty-club.jpg'
+
 export const yslImg = ysl
 export const yslHorizontalWhiteImg = yslHorizontalWhite
 export const yslHorizontalBlackImg = yslHorizontalBlack
@@ -91,3 +94,6 @@ export const parfumsImg = parfums
 export const skincareImg = skincare
 
 export const heroBannerImg = heroBanner
+
+export const yslBeautyClubImg = yslBeautyClub
+export const smallYslBeautyClubImg = smallYslBeautyClub
