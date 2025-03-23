@@ -10,6 +10,7 @@ import Discover from "./components/Discover"
 import SlideableMenu from "./components/SlideableMenu"
 import MiniNavbar from "./components/MiniNavbar"
 import MiniStickyNavbar from "./components/MiniStickyNavbar"
+import Experience from "./components/Experience"
 
 const App = () => {
   const [isSticky, setIsSticky] = useState(false)
@@ -78,6 +79,7 @@ const App = () => {
       <HypeOnSocial />
       <Model />
       <Discover />
+      <Experience />
     </main>
   )
 }

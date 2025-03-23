@@ -8,7 +8,7 @@ import '../styles.css'
 
 const Discover = () => {
   return (
-    <section id="discover" className="overflow-hidden h-screen common-padding">
+    <section id="discover" className="overflow-hidden h-auto common-padding">
       <div className="screen-max-width h-full flex-col">
         <h1 className="section-heading flex-center mb-8">DISCOVER BY CATEGORY</h1>
 
