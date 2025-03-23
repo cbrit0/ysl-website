@@ -42,7 +42,7 @@
 }
 
 @utility sticky-navbar {
-  @apply absolute top-0 left-0 w-full z-30 flex-center gap-20 bg-white
+  @apply absolute top-0 left-0 w-full z-30 flex-center gap-3 2xl:gap-20 bg-white
 }
 
 @utility mini-sticky-navbar {
@@ -82,7 +82,7 @@
 }
 
 @utility top-shadow {
-  box-shadow: 0 -1px 2px -1px rgba(0, 0, 0, 0.2); /* Darker shadow on top */
+  box-shadow: 0 -1px 2px -1px rgba(0, 0, 0, 0.2);
 }
 
 @utility no-scroll {
