@@ -38,11 +38,29 @@ const Experience = () => {
 
   return (
     <section className="relative w-full h-screen overflow-hidden bg-black">
-      <img 
-        className="w-full h-auto object-cover" 
-        src={imageSrc} 
-        alt="YSL Beauty Club" 
-      />
+      <div className="relative top-0 left-0 w-auto h-auto">
+        <img
+          className="w-full h-auto object-cover" 
+          src={imageSrc} 
+          alt="YSL Beauty Club" 
+        />
+
+        <div className="flex-center absolute top-0 right-0 w-1/2 h-full p-24">
+          <div className="flex-col text-center text-white">
+            <div className="font-bold text-5xl mb-4">
+              JOIN THE YSL BEAUTY CLUB
+            </div>
+
+            <div className="text-xs mb-4">
+            Unlock exclusive access to the ultimate member-only experience. A luxurious journey awaits.
+            </div>
+            
+            <button className="h-14 w-48 cursor-pointer select-none bg-black font-semibold">
+              JOIN NOW
+            </button>
+          </div>
+        </div>
+      </div>
       
       <span 
         id="cruelty-free"
