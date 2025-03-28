@@ -67,15 +67,15 @@ const Experience = () => {
             alt="YSL Beauty Club" 
           />
 
-          <div className="flex-center absolute top-0 right-0 w-1/2 h-full p-24">
-            <div className="flex-col text-center text-white">
-              <div className="font-bold text-5xl mb-4">
-                JOIN THE YSL BEAUTY CLUB
+          <div className="flex-center absolute top-0 right-0 w-1/3 h-full">
+            <div className="flex-col text-center text-white mb-20">
+              <div className="font-bold text-[52px] leading-none mb-4 text-5xl">
+                JOIN THE <br /> YSL BEAUTY CLUB
               </div>
-              <div className="text-xs mb-4">
-                Unlock exclusive access to the ultimate member-only experience. A luxurious journey awaits.
+              <div className="text-[13px] leading-normal mb-4">
+                Unlock exclusive access to the ultimate member-only <br /> experience. A luxurious journey awaits.
               </div>
-              <button className="h-14 w-48 cursor-pointer select-none bg-black font-semibold">
+              <button className="h-14 w-40 cursor-pointer select-none bg-black font-semibold text-sm">
                 JOIN NOW
               </button>
             </div>
