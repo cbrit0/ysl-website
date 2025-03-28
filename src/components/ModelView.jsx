@@ -19,8 +19,10 @@ const ModelView = () => {
         makeDefault
         enableZoom={false}
         enablePan={false}
-        rotateSpeed={0.4}
+        rotateSpeed={0.5}
         target={new THREE.Vector3(0, 0 ,0)}
+        autoRotate
+        autoRotateSpeed={1.5}
       />
 
       <group position={[0, -1 ,0]}>
