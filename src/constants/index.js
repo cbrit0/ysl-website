@@ -135,3 +135,22 @@ export const categories = [
     image: skincareImg
   }
 ]
+
+export const footerLinks = [
+  {
+    title: 'SHOP YSL BEAUTY',
+    links: ['MAKEUP', 'FRAGRANCE', 'SKINCARE', 'GIFTSETS']
+  },
+  {
+    title: 'OUR NEWS',
+    links: ['YSL BEAUTY EDIT', 'PUSH THE BOUNDARIES', 'WOMEN\'S DAY', 'MOTHER\'S DAY', 'FATHER\'S DAY']
+  },
+  {
+    title: 'EXCLUSIVE SERVICES',
+    links: ['VIRTUAL MAKE UP TRY ON', 'AI SKINCARE DIAGNOSIS', 'POLYSENSORIAL FRAGRANCE FINDER', 'FOUNDATION SHADE FINDERS', 'PERSONNALISATION']
+  },
+  {
+    title: 'DISCOVER YSL BEAUTY',
+    links: ['YSL BEAUTY CLUB', 'OUR COMMITMENTS', 'OURIKA COMMUNITY GARDENS', 'REFILL TO REWILD', 'INSIDE OUR PRODUCTS', 'DARE TO RECYCLE']
+  }
+]
