@@ -11,6 +11,7 @@ import SlideableMenu from "./components/SlideableMenu"
 import MiniNavbar from "./components/MiniNavbar"
 import MiniStickyNavbar from "./components/MiniStickyNavbar"
 import Experience from "./components/Experience"
+import Footer from "./components/Footer"
 
 const App = () => {
   const [isSticky, setIsSticky] = useState(false)
@@ -80,6 +81,7 @@ const App = () => {
       <Model />
       <Discover />
       <Experience />
+      <Footer />
     </main>
   )
 }

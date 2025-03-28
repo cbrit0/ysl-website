@@ -32,7 +32,7 @@ const Experience = () => {
   }, [])
 
   return (
-    <section className="relative w-full min-h-screen overflow-hidden bg-white">
+    <section className="relative w-full h-auto overflow-hidden bg-white">
       {isMobile ? (
         <div className="flex flex-col h-full">
           <div className="flex flex-col items-center justify-centerp-6 pt-12 text-center">
