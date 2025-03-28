@@ -1,9 +1,9 @@
-import { highlightsSlides } from "../constants"
-import { useState, useRef, createRef } from "react"
+import { highlightsSlides } from '../constants'
+import { useState, useRef, createRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination } from 'swiper/modules'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faPlay, faPause } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
@@ -17,19 +17,19 @@ const VideoCarousel = () => {
   const videoRefs = useRef(highlightsSlides.map(() => createRef()))
 
   const togglePlayPause = (index) => {
-    const videoElement = videoRefs.current[index].current;
-    if (!videoElement) return;
+    const videoElement = videoRefs.current[index].current
+    if (!videoElement) return
 
     if (videoStates[index].isPlaying) {
-      videoElement.pause();
+      videoElement.pause()
     } else {
-      videoElement.play();
+      videoElement.play()
     }
 
     setVideoStates((prevStates) => {
-      const newStates = [...prevStates];
-      newStates[index] = { isPlaying: !prevStates[index].isPlaying };
-      return newStates;
+      const newStates = [...prevStates]
+      newStates[index] = { isPlaying: !prevStates[index].isPlaying }
+      return newStates
     })
   }
 
@@ -61,36 +61,36 @@ const VideoCarousel = () => {
       >
         {highlightsSlides.map((slide, index) => (
           <SwiperSlide key={slide.id}>
-            <div className="flex-center flex-col">
-              <div className="h-12 w-full mt-6 flex-center mb-4">
-                <p 
-                  className="text-center text-wrap w-70" 
+            <div className='flex-center flex-col'>
+              <div className='h-12 w-full mt-6 flex-center mb-4'>
+                <p
+                  className='text-center text-wrap w-70'
                   dangerouslySetInnerHTML={{ __html: slide.text }}
                 />
               </div>
 
-              <div className="relative w-full">
+              <div className='relative w-full'>
                 <video
                   ref={videoRefs.current[index]}
                   playsInline
-                  className="pointer-events-none w-full h-auto"
-                  preload="auto"
+                  className='pointer-events-none w-full h-auto'
+                  preload='auto'
                   muted
                   autoPlay
                   loop
                 >
-                  <source src={slide.video} type="video/mp4" />
+                  <source src={slide.video} type='video/mp4' />
                 </video>
 
-                <button 
-                  onClick={() => togglePlayPause(index)} 
-                  className="control-btn"
+                <button
+                  onClick={() => togglePlayPause(index)}
+                  className='control-btn'
                 >
                   <FontAwesomeIcon icon={videoStates[index].isPlaying ? faPause : faPlay} />
                 </button>
               </div>
 
-              <a className="discover-button">
+              <a className='discover-button'>
                 {slide.button}
               </a>
             </div>
@@ -98,13 +98,13 @@ const VideoCarousel = () => {
         ))}
       </Swiper>
 
-      <div id="custom-pagination-video" className="custom-pagination" />
+      <div id='custom-pagination-video' className='custom-pagination' />
 
-      <div id="custom-navigation-video" className="custom-navigation">
-        <button id="custom-prev-video" className="custom-prev">
+      <div id='custom-navigation-video' className='custom-navigation'>
+        <button id='custom-prev-video' className='custom-prev'>
           &#10094;
         </button>
-        <button id="custom-next-video" className="custom-next">
+        <button id='custom-next-video' className='custom-next'>
           &#10095;
         </button>
       </div>

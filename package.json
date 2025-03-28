@@ -20,6 +20,7 @@
     "@react-three/drei": "^9.121.5",
     "@react-three/fiber": "^8.17.14",
     "@splidejs/react-splide": "^0.7.12",
+    "@stylistic/eslint-plugin-jsx": "^4.2.0",
     "@tailwindcss/vite": "^4.0.6",
     "gsap": "^3.12.7",
     "react": "^18.2.0",
@@ -36,7 +37,7 @@
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.20.1",
     "eslint-plugin-react": "^7.37.4",
-    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.18",
     "globals": "^15.15.0",
     "vite": "^6.1.0"

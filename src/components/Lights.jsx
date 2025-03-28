@@ -1,9 +1,10 @@
-import { Environment, Lightformer } from "@react-three/drei";
+/* eslint-disable react/no-unknown-property */
+import { Environment, Lightformer } from '@react-three/drei'
 
 const Lights = () => {
   return (
     // group different lights and lightformers. We can use group to organize lights, cameras, meshes, and other objects in the scene.
-    <group name="lights">
+    <group name='lights'>
       {/**
        * @description Environment is used to create a background environment for the scene
        * https://github.com/pmndrs/drei?tab=readme-ov-file#environment
@@ -15,21 +16,21 @@ const Lights = () => {
            * https://github.com/pmndrs/drei?tab=readme-ov-file#lightformer
            */}
           <Lightformer
-            form="rect"
+            form='rect'
             intensity={1}
             position={[-1, 0, -10]}
             scale={10}
-            color={"#495057"}
+            color={'#495057'}
           />
           <Lightformer
-            form="rect"
+            form='rect'
             intensity={3}
             position={[-10, 2, 1]}
             scale={10}
             rotation-y={Math.PI / 2}
           />
           <Lightformer
-            form="rect"
+            form='rect'
             intensity={2}
             position={[10, 0, 1]}
             scale={10}
@@ -51,7 +52,7 @@ const Lights = () => {
         intensity={Math.PI * 3}
       />
     </group>
-  );
-};
+  )
+}
 
-export default Lights;
+export default Lights

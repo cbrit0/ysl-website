@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { Html, OrbitControls, PerspectiveCamera, View } from '@react-three/drei'
 import * as THREE from 'three'
 import HighHeels from './HighHeels'
@@ -7,7 +8,7 @@ import { Suspense } from 'react'
 const ModelView = () => {
   return (
     <View
-      className="w-full h-full cursor-pointer select-none"
+      className='w-full h-full cursor-pointer select-none'
     >
       <ambientLight intensity={0.8} />
 
@@ -15,7 +16,7 @@ const ModelView = () => {
 
       <Lights />
 
-      <OrbitControls 
+      <OrbitControls
         makeDefault
         enableZoom={false}
         enablePan={false}

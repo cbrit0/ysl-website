@@ -1,8 +1,8 @@
-import { yslHorizontalBlackImg } from "../utils"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faMagnifyingGlass, faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
-import gsap from "gsap"
-import { useGSAP } from "@gsap/react"
+import { yslHorizontalBlackImg } from '../utils'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass, faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
 
 gsap.registerPlugin(useGSAP)
 
@@ -35,26 +35,26 @@ const MiniStickyNavbar = ({ isSticky, isAtTop, isMenuOpen, toggleMenu }) => {
 
   return (
     <header
-      id="mini-sticky-navbar"
-      className="mini-sticky-navbar"
+      id='mini-sticky-navbar'
+      className='mini-sticky-navbar'
     >
-      <div className="flex items-center justify-between">
-        <img 
-          src={yslHorizontalBlackImg} 
-          alt="YSL"
-          className="w-26"
+      <div className='flex items-center justify-between'>
+        <img
+          src={yslHorizontalBlackImg}
+          alt='YSL'
+          className='w-26'
         />
 
         <div>
           <FontAwesomeIcon
             icon={faMagnifyingGlass}
-            className="mr-8 text-black"
+            className='mr-8 text-black'
           />
 
-          <FontAwesomeIcon 
-            icon={isMenuOpen ? faXmark : faBars} 
-            className="text-black"
-            onClick={toggleMenu} 
+          <FontAwesomeIcon
+            icon={isMenuOpen ? faXmark : faBars}
+            className='text-black'
+            onClick={toggleMenu}
           />
         </div>
       </div>

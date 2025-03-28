@@ -1,5 +1,5 @@
-import { forwardRef, useState } from "react"
-import { yslHorizontalWhiteImg, yslHorizontalBlackImg } from "../utils"
+import { forwardRef, useState } from 'react'
+import { yslHorizontalWhiteImg, yslHorizontalBlackImg } from '../utils'
 import { navList } from '../constants'
 
 const Navbar = forwardRef(( { isAtTop }, ref ) => {
@@ -21,22 +21,22 @@ const Navbar = forwardRef(( { isAtTop }, ref ) => {
   return (
     <header
       ref={ref}
-      id="header"
+      id='header'
       className={`absolute top-0 left-0 w-full pt-5 px-5 z-20 ${
         isHovered ? 'bg-white' : 'bg-transparent'
       } transition-colors duration-300 ease-in`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="flex-center mb-6">
-        <img 
-          src={isHovered ? yslHorizontalBlackImg : yslHorizontalWhiteImg} 
-          alt="YSL"
-          className="cursor-pointer"
+      <div className='flex-center mb-6'>
+        <img
+          src={isHovered ? yslHorizontalBlackImg : yslHorizontalWhiteImg}
+          alt='YSL'
+          className='cursor-pointer'
         />
       </div>
 
-      <nav id="navbar" className="flex-center gap-2">
+      <nav id='navbar' className='flex-center gap-2'>
         {navList.map((nav, index) => (
           <div
             key={index}
@@ -59,5 +59,7 @@ const Navbar = forwardRef(( { isAtTop }, ref ) => {
     </header>
   )
 })
+
+Navbar.displayName = 'Navbar'
 
 export default Navbar

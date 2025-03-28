@@ -1,7 +1,7 @@
-import { yslBeautyClubImg, smallYslBeautyClubImg, crueltyFreeImg } from "../utils"
-import { useState, useEffect } from "react"
-import gsap from "gsap"
-import { useGSAP } from "@gsap/react"
+import { yslBeautyClubImg, smallYslBeautyClubImg, crueltyFreeImg } from '../utils'
+import { useState, useEffect } from 'react'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
 
 gsap.registerPlugin(useGSAP)
 
@@ -32,60 +32,60 @@ const Experience = () => {
   }, [])
 
   return (
-    <section className="relative w-full h-auto overflow-hidden bg-white">
+    <section className='relative w-full h-auto overflow-hidden bg-white'>
       {isMobile ? (
-        <div className="flex flex-col h-full">
-          <div className="flex flex-col items-center justify-centerp-6 pt-12 text-center">
-            <div className="font-bold text-2xl mb-8 text-black">
+        <div className='flex flex-col h-full'>
+          <div className='flex flex-col items-center justify-centerp-6 pt-12 text-center'>
+            <div className='font-bold text-2xl mb-8 text-black'>
               JOIN THE YSL BEAUTY CLUB
             </div>
           </div>
-          
-          <div className="flex-1">
+
+          <div className='flex-1'>
             <img
-              className="w-full h-auto object-cover" 
-              src={imageSrc} 
-              alt="YSL Beauty Club" 
+              className='w-full h-auto object-cover'
+              src={imageSrc}
+              alt='YSL Beauty Club'
             />
           </div>
-          
-          <div className="flex-center flex-col p-6 pb-12">
-            <div className="text-sm text-center mb-6">
+
+          <div className='flex-center flex-col p-6 pb-12'>
+            <div className='text-sm text-center mb-6'>
               Unlock exclusive access to the ultimate member-only experience. A luxurious journey awaits.
             </div>
 
-            <button className="h-14 w-48 cursor-pointer select-none bg-black font-semibold text-white">
+            <button className='h-14 w-48 cursor-pointer select-none bg-black font-semibold text-white'>
               JOIN NOW
             </button>
           </div>
         </div>
       ) : (
-        <div className="relative top-0 left-0 w-auto h-full">
+        <div className='relative top-0 left-0 w-auto h-full'>
           <img
-            className="w-full h-full object-cover" 
-            src={imageSrc} 
-            alt="YSL Beauty Club" 
+            className='w-full h-full object-cover'
+            src={imageSrc}
+            alt='YSL Beauty Club'
           />
 
-          <div className="flex-center absolute top-0 right-0 w-1/3 h-full">
-            <div className="flex-col text-center text-white mb-20">
-              <div className="font-bold text-[52px] leading-none mb-4 text-5xl">
+          <div className='flex-center absolute top-0 right-0 w-1/3 h-full'>
+            <div className='flex-col text-center text-white mb-20'>
+              <div className='font-bold text-[52px] leading-none mb-4 text-5xl'>
                 JOIN THE <br /> YSL BEAUTY CLUB
               </div>
-              <div className="text-[13px] leading-normal mb-4">
+              <div className='text-[13px] leading-normal mb-4'>
                 Unlock exclusive access to the ultimate member-only <br /> experience. A luxurious journey awaits.
               </div>
-              <button className="h-14 w-40 cursor-pointer select-none bg-black font-semibold text-sm">
+              <button className='h-14 w-40 cursor-pointer select-none bg-black font-semibold text-sm'>
                 JOIN NOW
               </button>
             </div>
           </div>
         </div>
       )}
-      
-      <span 
-        id="cruelty-free"
-        className="block h-10 bg-repeat bg-[length:auto_100%]"
+
+      <span
+        id='cruelty-free'
+        className='block h-10 bg-repeat bg-[length:auto_100%]'
         style={{ backgroundImage: `url(${crueltyFreeImg})` }}
       />
     </section>
