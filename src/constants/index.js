@@ -136,7 +136,7 @@ export const categories = [
   }
 ]
 
-export const footerLinks = [
+export const footerNav = [
   {
     title: 'SHOP YSL BEAUTY',
     links: ['MAKEUP', 'FRAGRANCE', 'SKINCARE', 'GIFTSETS']
@@ -154,3 +154,5 @@ export const footerLinks = [
     links: ['YSL BEAUTY CLUB', 'OUR COMMITMENTS', 'OURIKA COMMUNITY GARDENS', 'REFILL TO REWILD', 'INSIDE OUR PRODUCTS', 'DARE TO RECYCLE']
   }
 ]
+
+export const footerLinks = ['Privacy policy', 'T&C', 'Cookie settings', 'Contact Us', 'Site Map']
