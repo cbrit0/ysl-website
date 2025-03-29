@@ -1,67 +1,66 @@
 # ysl-website
 
-Welcome to the YSL Beauty Webpage Replica project! This is a personal project aimed at replicating the official [YSL Beauty website](https://www.yslbeauty.com/) using modern web development technologies. The project is currently under construction and is only accessible on localhost. It is not intended for commercial use but rather as a showcase of my frontend development skills.
+A frontend-focused replication of the [YSL Beauty official website](https://www.yslbeauty.com/) designed to showcase modern web development skills. This project demonstrates proficiency with cutting-edge frontend technologies while maintaining full responsiveness across all device sizes.
 
-## Technologies Used
+**Live Demo**: [https://ysl-website.fly.dev/](https://ysl-website.fly.dev/)
 
-- **React + Vite**: For building the user interface and managing components.
-- **TailwindCSS**: For styling the components and ensuring a responsive design.
-- **GSAP (GreenSock Animation Platform)**: For creating smooth and complex animations.
-- **Three.js**: For integrating 3D models into the webpage.
-- **Splide.js**: For creating interactive and responsive carousels.
+## 🚀 Project Intent
 
-## Project Status
+This is a **non-commercial, educational project** created to:
+- Demonstrate advanced frontend development capabilities
+- Showcase implementation of complex UI/UX patterns
+- Highlight performance optimization techniques
+- No association with YSL Beauty - all brand assets used for demonstration purposes only
 
-This project is currently **under construction**. The webpage is only visible on localhost and is not yet deployed to any live server. The primary goal is to replicate the YSL Beauty website as closely as possible, focusing on the frontend design and user experience.
+## ✨ Features
 
-**Note**: The application is **not yet responsive** to smaller and medium devices. This is a feature that will be implemented in future updates.
+- Pixel-perfect responsive design (mobile, tablet, desktop)
+- High-performance animations with GSAP
+- Interactive 3D product visualizations using Three.js
+- Smooth carousel implementations with Swiper
+- Modern React architecture with Vite
+- Utility-first CSS with Tailwind
+- CI/CD deployment pipeline
 
-## Getting Started
+## 🛠 Tech Stack
 
-To get a local copy of the project up and running, follow these steps:
+| Category        | Technologies                                                                 |
+|-----------------|-----------------------------------------------------------------------------|
+| Core Framework  | ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB) ![Vite](https://img.shields.io/badge/Vite-B73BFE?style=flat&logo=vite&logoColor=FFD62E) |
+| Styling         | ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white) |
+| Animations      | ![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=flat&logo=greensock&logoColor=white) |
+| 3D Graphics     | ![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat&logo=three.js&logoColor=white) |
+| UI Components   | ![Swiper](https://img.shields.io/badge/Swiper.js-6332F6?style=flat&logo=swiper&logoColor=white) ![Font Awesome](https://img.shields.io/badge/Font_Awesome-528DD7?style=flat&logo=font-awesome&logoColor=white) |
+| Deployment      | ![Fly.io](https://img.shields.io/badge/Fly.io-7B2DFB?style=flat&logo=fly.io&logoColor=white) |
 
-### Prerequisites
+## 📦 Installation
 
-- Node.js and npm installed on your machine.
-
-### Installation
-
-1. **Clone the repository**
-
+1. Clone the repository:
    ```bash
    git clone https://github.com/cbrit0/ysl-website.git
-   ```
-
-2. **Navigate to the project directory**
-
-   ```bash
    cd ysl-website
    ```
 
-3. **Install dependencies**
-
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-4. **Start the development server**
-
+3. Run development server:
    ```bash
    npm run dev
    ```
 
-5. **Open your browser**
+4. Build for production:
+   ```bash
+   npm run build
+   ```
 
-   Visit `http://localhost:5173` to view the project.
+## 🎯 Development Roadmap
 
-## Usage
+- User Experience Enhancements
+- Performance Optimization
 
-This project is purely for **entertainment and educational purposes**. It is not intended to be used for any commercial activities or to earn money. The main objective is to demonstrate my skills as a frontend developer and to explore the capabilities of modern web technologies.
+## ⚠️ Disclaimer
 
-## Responsiveness
-
-As of now, the application is **not responsive** to smaller and medium devices. This is a known limitation, and I am actively working on implementing responsive design to ensure the webpage looks great on all screen sizes.
-
----
-
-Thank you for checking out this project! I hope you enjoy exploring it as much as I enjoyed building it. 🚀
+This project is **not affiliated with YSL Beauty** and was created solely for educational purposes to demonstrate frontend development skills. All brand assets, logos, and product images are property of YSL Beauty and are used here for demonstration only.
